@@ -1,0 +1,6 @@
+interface:
+  display_name: "AI 动画工厂"
+  short_description: "一句话到动画短片的总经理生产流程"
+  default_prompt: "使用 $ai-animation-factory 把我的场景目标先做方向审计，再规划并执行动画流程。"
+policy:
+  allow_implicit_invocation: true

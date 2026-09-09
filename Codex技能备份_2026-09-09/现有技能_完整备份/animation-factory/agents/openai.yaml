@@ -1,0 +1,6 @@
+interface:
+  display_name: "动画工厂"
+  short_description: "一句话到动画短片的完整生产入口"
+  default_prompt: "使用 $animation-factory，先让 总经理审方向和能力，再准备角色、分镜、动作代表段，最后生产并交独立审计。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Master Capability Record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["capability_id", "capability_name", "problem_solved", "model_or_tool", "input", "output", "can_do", "cannot_guarantee", "required_permission", "required_environment", "minimum_probe", "pass_condition", "fail_condition", "evidence_level", "applicable_scope", "failure_boundary", "version", "source", "last_verified", "status", "evidence"],
+  "properties": {
+    "capability_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["CLAIMED", "OBSERVED", "PROVEN", "PARTIAL", "UNSUPPORTED", "BLOCKED"]},
+    "evidence": {"type": "string"},
+    "last_verified": {"type": "string"}
+  }
+}

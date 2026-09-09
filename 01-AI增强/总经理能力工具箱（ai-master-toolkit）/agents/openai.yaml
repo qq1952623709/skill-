@@ -1,0 +1,3 @@
+display_name: "总经理能力工具箱"
+short_description: "语义调度、能力探针、纠偏与工具补齐"
+default_prompt: "先读取能力图与 roster，再按目标语义选择并验证工具；不要只靠关键词，也不要在方向未审计前付费执行。"

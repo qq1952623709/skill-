@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Master Source Record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["source_id", "title", "locator", "observed_date", "information_status", "claim", "decision", "evidence_level", "synthetic"],
+  "properties": {
+    "source_id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "locator": {"type": "string", "minLength": 1},
+    "observed_date": {"type": "string", "minLength": 1},
+    "information_status": {"enum": ["OBSERVED", "REPORTED", "INFERRED", "UNKNOWN"]},
+    "claim": {"type": "string", "minLength": 1},
+    "decision": {"enum": ["CANDIDATE", "MAP_TO_EXISTING", "REJECTED_FOR_CORE", "NEEDS_REALITY_PROBE", "DEPRECATED"]},
+    "evidence_level": {"type": "string", "minLength": 1},
+    "synthetic": {"type": "boolean"}
+  }
+}

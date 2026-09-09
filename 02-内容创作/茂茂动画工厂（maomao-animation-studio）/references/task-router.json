@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "把不说专业词的动画任务路由到必须执行的子技能；关键词只作加速，不能作为唯一触发条件。",
+  "routes": [
+    {
+      "id": "edit_only",
+      "when": [
+        "用户只要求剪掉、删除、裁掉、替换或保留现有视频的一小段"
+      ],
+      "must_load": [
+        "ai-task-compiler",
+        "chatcut:verification",
+        "chatcut:export"
+      ],
+      "must_produce_before_generation": ["edit_scope", "source_asset", "timeline_diff"],
+      "forbid_before_pass": ["novel-characters", "novel-art", "novel-script", "novel-storyboard", "paid_video_generation"],
+      "hard_fail_if": ["edit_scope_missing", "source_asset_missing"]
+    },
+    {
+      "id": "consult_only",
+      "when": [
+        "用户询问哪个模型/工具适合、怎么收费、是否支持、比较平台、只咨询路线"
+      ],
+      "must_load": ["ai-task-compiler", "skill-finder", "browser-research-agent"],
+      "must_produce_before_generation": ["comparison_basis", "current_capability_evidence", "recommendation_with_limits"],
+      "forbid_before_pass": ["video_generation", "timeline_mutation", "paid_submission"],
+      "hard_fail_if": ["consult_request_submits_generation"]
+    },
+    {
+      "id": "resume",
+      "when": ["用户说继续、恢复、上次做到哪、检查原任务状态"],
+      "must_load": ["ai-master", "maomao-animation-studio", "chatcut:verification"],
+      "must_produce_before_generation": ["project_state_read", "job_or_render_status", "budget_reconciliation"],
+      "forbid_before_pass": ["duplicate_submission"],
+      "hard_fail_if": ["old_state_not_read"]
+    },
+    {
+      "id": "knowledge_short",
+      "when": ["用户只要观点讲解、资讯短片或知识卡，不要求角色动画生产"],
+      "must_load": ["ai-task-compiler", "maomao-animation-studio", "short-video-script-lab"],
+      "must_produce_before_generation": ["knowledge_brief", "script_or_card_plan"],
+      "forbid_before_pass": ["novel-characters", "full_animation_chain", "paid_video_generation"],
+      "hard_fail_if": ["knowledge_task_forced_into_animation_oneshot"]
+    },
+    {
+      "id": "animation_single_prompt",
+      "when": [
+        "用户要生成不超过15秒的单段动画或动作镜头，并已给出足够清楚的角色、场景、动作或完整提示词",
+        "任务不要求跨段持续角色一致性、连续剧资产管理或多场景叙事"
+      ],
+      "must_load": [
+        "maomao-animation-studio",
+        "chatcut:video-gen",
+        "chatcut:verification"
+      ],
+      "must_produce_before_generation": [
+        "compact_director_packet",
+        "continuity_anchors",
+        "dialogue_and_sound_plan",
+        "cost_and_spend_gate"
+      ],
+      "forbid_before_pass": [
+        "full_novel_pipeline_by_default",
+        "paid_multi_variant_generation",
+        "silent_output_when_dialogue_was_requested"
+      ],
+      "hard_fail_if": [
+        "user_constraints_changed",
+        "dialogue_or_sound_omitted",
+        "provider_or_cost_unknown_before_paid_submit"
+      ]
+    },
+    {
+      "id": "animation_combat_oneshot",
+      "when": [
+        "用户描述两人或多人打斗、打架、对打、打戏、动作片、追击、武器战、踢击、碰撞、闪避、击退、打击感、重量、重心",
+        "用户给出动作参考视频并要求复刻节奏、复刻参考片、还原动作或逐帧重建"
+      ],
+      "must_load": [
+        "ai-task-compiler",
+        "maomao-animation-studio",
+        "novel-characters",
+        "novel-art",
+        "novel-script",
+        "novel-storyboard",
+        "video-transcribe",
+        "browser-research-agent",
+        "agent-eval-loop",
+        "chatcut:video-gen",
+        "chatcut:asset-import",
+        "chatcut:verification"
+      ],
+      "must_produce_before_generation": [
+        "source_provenance_report",
+        "character_cast_and_consistency_anchor",
+        "character_sheet_or_four_view_or_explicit_NA_reason",
+        "scene_and_prop_anchor",
+        "beat_script",
+        "storyboard_with_camera_and_timing",
+        "combat_action_chain",
+        "free_or_zero_cost_representative_unit"
+      ],
+      "forbid_before_pass": [
+        "paid_long_video_generation",
+        "full_50_second_generation",
+        "claiming_reference_provider_from_visual_style",
+        "using_prompt_only_as_motion_control"
+      ],
+      "hard_fail_if": [
+        "no_route_log",
+        "no_character_anchor_for_recurring_characters",
+        "no_storyboard_for_multi-shot_output",
+        "no action_unit audit",
+        "provider_or_cost_unknown_before_paid_submit"
+      ]
+    },
+    {
+      "id": "animation_dialogue_oneshot",
+      "when": [
+        "用户要做短剧、漫剧、角色对白、配音、口型或连续多镜头动画",
+        "用户只说场景或故事且最终交付是超过15秒、多段或多镜头的动画短片"
+      ],
+      "must_load": [
+        "ai-task-compiler",
+        "maomao-animation-studio",
+        "novel-characters",
+        "novel-art",
+        "novel-script",
+        "novel-storyboard",
+        "chatcut:video-gen",
+        "chatcut:voice",
+        "chatcut:verification"
+      ],
+      "must_produce_before_generation": [
+        "character_anchor",
+        "script_and_dialogue_timing",
+        "storyboard",
+        "voice_plan",
+        "capability_probe"
+      ],
+      "forbid_before_pass": ["paid_multi-shot_generation"]
+    }
+  ],
+      "dispatch_contract": {
+    "activation": "semantic_task_family_first",
+    "keyword_only": false,
+    "skill_file_presence_is_not_runtime_proof": true,
+    "each_loaded_skill_requires": ["read_path", "sha256", "runtime_state"],
+    "runtime_states": ["CALLABLE", "INSTALLED_NOT_CALLABLE", "MISSING", "BLOCKED", "UNKNOWN"],
+    "unknown_route_action": "research_or_ask_before_paid_production",
+    "priority_order": ["edit_only", "consult_only", "resume", "knowledge_short", "animation_single_prompt", "animation_combat_oneshot", "animation_dialogue_oneshot"],
+    "wrong_method_rule": "用户要求直接把整段视频丢进生成器、跳过分镜或跳过角色锚点时，保留目标但拒绝该手段，路由到研究/纠偏或对应动画路线。"
+  }
+}

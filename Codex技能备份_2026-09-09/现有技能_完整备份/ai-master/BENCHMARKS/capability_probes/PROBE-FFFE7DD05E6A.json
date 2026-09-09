@@ -1,0 +1,24 @@
+{
+  "probe_id": "PROBE-FFFE7DD05E6A",
+  "status": "UNKNOWN_NEEDS_REALITY_PROBE",
+  "product": "Grok Bot",
+  "claim": "是否支持X？",
+  "environment": "UNVERIFIED_NO_LIVE_ACCOUNT_TEST",
+  "action": "在Grok Bot的真实可用环境中，只执行一个足以证明或证伪该主张的最小动作",
+  "success": "产生与主张直接对应、可重复观察的结果及证据地址",
+  "failure": "明确失败、功能不存在、权限不足，或结果不能直接支持主张",
+  "evidence": "保存环境、动作、可观察行为、制品、截图/日志、错误和限制",
+  "limits": {
+    "max_actions": 5,
+    "max_runtime_minutes": 10,
+    "max_retries": 2,
+    "max_files": 3,
+    "max_spend": 0
+  },
+  "stop": [
+    "登录或权限不可用",
+    "需要付款、发布、删除、生产修改或凭据变更",
+    "同一根因连续失败3次",
+    "超过任一探针上限"
+  ]
+}

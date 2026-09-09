@@ -1,0 +1,25 @@
+{"method_id":"M-01","name":"Dependency Test","problem_solved":"判断任务应串行还是并行","status":"OBSERVED","promotion_rule":"真实任务降低等待且交接无损","source":"V1.0 contract"}
+{"method_id":"M-02","name":"Fan-out Reduce Synthesize","problem_solved":"处理真实并行宽度","status":"OBSERVED","promotion_rule":"基准证明质量或时间优于串行","source":"V1.0 contract"}
+{"method_id":"M-03","name":"Edge Handoff Verification","problem_solved":"发现节点之间的信息丢失","status":"OBSERVED","promotion_rule":"真实交接回归测试通过","source":"V1.0 contract"}
+{"method_id":"M-04","name":"Build the Lever","problem_solved":"把重复确定性操作变成工具","status":"OBSERVED","promotion_rule":"重复任务的总验证成本下降","source":"V1.0 contract"}
+{"method_id":"M-05","name":"Materialized Memory","problem_solved":"用机器可读状态替代长聊天","status":"OBSERVED","promotion_rule":"跨会话恢复测试成功","source":"V1.0 contract"}
+{"method_id":"M-06","name":"Context Hygiene","problem_solved":"减少协调器上下文污染","status":"OBSERVED","promotion_rule":"长任务交接质量不下降且上下文成本下降","source":"V1.0 contract"}
+{"method_id":"M-07","name":"Workflow Compression","problem_solved":"删除不必要的软件切换和人工传话","status":"OBSERVED","promotion_rule":"真实流程时间或人工步骤减少","source":"V1.0 contract"}
+{"method_id":"M-08","name":"Editable Structured Artifact","problem_solved":"支持局部修改并避免全局重生成","status":"OBSERVED","promotion_rule":"局部返工成本下降","source":"V1.0 contract"}
+{"method_id":"M-09","name":"Invariant Variable Separation","problem_solved":"保持一致性同时允许变化","status":"OBSERVED","promotion_rule":"多样性样本保持不变量","source":"V1.0 contract"}
+{"method_id":"M-10","name":"Semantic Decomposition","problem_solved":"按意义单元而非机械数量拆分","status":"OBSERVED","promotion_rule":"边界验收优于机械拆分","source":"V1.0 contract"}
+{"method_id":"M-11","name":"Risk-based Verification","problem_solved":"把验证预算集中在高风险处","status":"OBSERVED","promotion_rule":"相同预算发现更多关键缺陷","source":"V1.0 contract"}
+{"method_id":"M-12","name":"Automation Ceiling","problem_solved":"限制无人值守失控范围","status":"OBSERVED","promotion_rule":"异常模拟在上限内停止","source":"V1.0 contract"}
+{"method_id":"M-13","name":"Trust Decay","problem_solved":"防止历史证据永久兑换信任","status":"OBSERVED","promotion_rule":"环境变化能触发复验","source":"V1.0 contract"}
+{"method_id":"M-14","name":"Agent Creation Gate","problem_solved":"避免一次性任务膨胀为Agent","status":"OBSERVED","promotion_rule":"复杂度与重复性匹配","source":"V1.0 contract"}
+{"method_id":"M-15","name":"Automation Gardening","problem_solved":"淘汰无价值和重复自动化","status":"OBSERVED","promotion_rule":"周期审查减少重复且不损失能力","source":"V1.0 contract"}
+{"method_id":"M-16","name":"Work Mining Before Automation","problem_solved":"先找到真实重复工作再自动化","status":"OBSERVED","promotion_rule":"自动化命中高频真实任务","source":"V1.0 contract"}
+{"method_id":"M-17","name":"Model Routing","problem_solved":"用最低成本稳定通过验收","status":"OBSERVED","promotion_rule":"同类任务基准证明总验证成本更低","source":"V1.0 contract"}
+{"method_id":"M-18","name":"Harness Not Model","problem_solved":"区分工作环境与底层模型能力","status":"OBSERVED","promotion_rule":"独立变量测试能解释差异","source":"V1.0 contract"}
+{"method_id":"M-19","name":"Final Artifact Re-verification","problem_solved":"防止节点PASS而最终制品失败","status":"OBSERVED","promotion_rule":"最终制品缺陷测试可被捕获","source":"V1.0 contract"}
+{"method_id":"M-20","name":"Minimum Necessary Freedom","problem_solved":"通过缩小自由度降低失控","status":"OBSERVED","promotion_rule":"失败样本在更窄边界内通过","source":"V1.0 contract"}
+{"method_id":"M-21","name":"Reference-to-Method Transfer","problem_solved":"从优秀参考中提取可迁移机制，同时避免复制原作者表达","status":"OBSERVED","promotion_rule":"真实创作任务同时通过质量、原创性和来源边界检查","source":"SRC-20260904-MARKETING-AI-BUNDLE"}
+{"method_id":"M-22","name":"One-Loop-at-a-Time Automation","problem_solved":"避免同时上线多个无人值守闭环导致错误来源不可定位","status":"OBSERVED","promotion_rule":"单闭环人工试跑通过后自动运行，异常可归因且未越过权限边界","source":"SRC-20260904-MARKETING-AI-BUNDLE"}
+{"method_id":"M-23","name":"Metric-Gated Iteration","problem_solved":"让下一轮内容或投放基于可观察结果而非主观兴奋","status":"OBSERVED","promotion_rule":"预先定义指标与停止条件的真实A/B迭代优于固定基线，且控制混杂变量","source":"SRC-20260904-MARKETING-AI-BUNDLE"}
+{"method_id":"M-24","name":"Reality-Anchor Alternation","problem_solved":"让幻想角色进入现实的短片产生物理接触感与叙事推进","status":"OBSERVED","promotion_rule":"原创真实任务中，自拍与POV现实锚点交替版本在连贯性和可信感验收上优于连续角色展示","source":"SRC-20260905-PIXAI-SEEDANCE-CASES"}
+{"method_id":"M-25","name":"Timecoded Action Prompt Contract","problem_solved":"把长动作片的角色一致性、动作因果、镜头、特效、音频和禁令变成可分段验收合同","status":"OBSERVED","promotion_rule":"同模型同参考图的受控对照中，分层合同在身份保持、动作完成、镜头可读和返工成本上优于普通一句话提示","source":"SRC-20260905-PIXAI-SEEDANCE-CASES"}

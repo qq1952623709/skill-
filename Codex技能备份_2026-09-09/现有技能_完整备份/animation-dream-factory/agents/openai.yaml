@@ -1,0 +1,6 @@
+interface:
+  display_name: "动画梦工厂"
+  short_description: "动画短片的导演、制作与审计入口"
+  default_prompt: "使用 $animation-dream-factory，把我的故事先转成可审计的动画制作计划，再做最小代表段。"
+policy:
+  allow_implicit_invocation: true

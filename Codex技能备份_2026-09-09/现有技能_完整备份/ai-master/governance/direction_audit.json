@@ -1,0 +1,26 @@
+{
+  "purpose": "Prevent high-quality execution of the wrong problem.",
+  "required_before": "STANDARDS_FROZEN",
+  "checks": [
+    "separate_ceo_goal_from_proposed_solution",
+    "mark_key_facts_as_verified_assumption_or_unknown",
+    "identify_missing_audience_business_cost_copyright_and_delivery_constraints",
+    "compare_at_least_one_materially_different_route_when_stakes_are_medium_or_high",
+    "prove_acceptance_criteria_serve_the_goal"
+  ],
+  "verdicts": ["DIRECTION_PASS", "NEEDS_CEO_DECISION", "NEEDS_RESEARCH", "WRONG_PROBLEM"],
+  "transitions": {
+    "DIRECTION_PASS": {"next_phase": "CONTRACT", "allow_produce": true},
+    "NEEDS_CEO_DECISION": {"next_phase": "PAUSED", "allow_produce": false, "pause_reason": "CEO_DIRECTION_DECISION"},
+    "NEEDS_RESEARCH": {"next_phase": "DIRECTION_RESEARCH", "allow_produce": false, "max_cycles": 2, "on_exhaustion": "PAUSED"},
+    "WRONG_PROBLEM": {"next_phase": "PAUSED", "allow_produce": false, "pause_reason": "WRONG_PROBLEM_HARD_STOP"}
+  },
+  "risk_policy": {
+    "low_reversible": "GM performs compact internal direction check without interrupting CEO",
+    "medium_or_high": "independent model reviews frozen direction brief before production",
+    "mandatory_independent": ["paid", "public_release", "brand", "copyright", "high_cost", "unfamiliar_domain", "irreversible"]
+  },
+  "ceo_override": "CEO may choose a warned-against route after seeing evidence, except illegal, unsafe, unauthorized, or materially deceptive execution.",
+  "anti_deference_rule": "GM must challenge unsupported assumptions and present the best evidenced alternative; final business choice remains CEO's.",
+  "max_ceo_interruptions_before_production": 1
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "总经理 / AI 总经理"
+  short_description: "自动选工具、审方向、调度员工并组织独立审计"
+  default_prompt: "使用 $ai-master 先读取公司能力地图，再为我的目标选择路线、工具和最便宜验证。"
+policy:
+  allow_implicit_invocation: true

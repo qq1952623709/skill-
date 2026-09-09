@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Master Method Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["method_id", "name", "problem_solved", "status", "promotion_rule", "source"],
+  "properties": {
+    "method_id": {"type": "string", "minLength": 1},
+    "name": {"type": "string", "minLength": 1},
+    "problem_solved": {"type": "string", "minLength": 1},
+    "status": {"enum": ["CANDIDATE", "OBSERVED", "VERIFIED", "REJECTED", "DEPRECATED"]},
+    "promotion_rule": {"type": "string", "minLength": 1},
+    "source": {"type": "string", "minLength": 1}
+  }
+}

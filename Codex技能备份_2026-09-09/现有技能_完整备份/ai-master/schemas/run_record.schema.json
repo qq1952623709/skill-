@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Master Verified Run",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["run_id", "problem", "environment", "method", "input", "action", "artifact", "evidence", "failures", "corrections", "time", "cost", "human_intervention", "result", "would_run_again"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "artifact": {"type": "string", "minLength": 1},
+    "evidence": {"type": "string", "minLength": 1},
+    "result": {"enum": ["PASS", "FAIL", "PARTIAL"]},
+    "would_run_again": {"type": "boolean"}
+  }
+}

@@ -1,0 +1,2 @@
+
+{"affected_method": "M-04 Build the Lever / Skill packaging", "environment": "official skill-creator initializer", "failure_id": "FAIL-BUILD-001", "fix": "改为25-64字符的描述并运行quick_validate", "permanent_constraint": "新增或修改agents/openai.yaml后必须运行官方quick_validate", "regression_test": "quick_validate.py返回退出码0", "root_cause": "生成前未按官方25-64字符约束计数", "status": "MITIGATED", "symptom": "short_description长度14，初始化器返回错误", "task": "初始化ai-master Skill元数据", "wrong_assumption": "中文短描述只要语义完整即可"}

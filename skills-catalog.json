@@ -1,0 +1,2685 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-06T12:12:52.338269+00:00",
+  "roots": {
+    "desktop_library": "/Users/xingxuan/Desktop/skills 库",
+    "codex_runtime": "/Users/xingxuan/.codex/skills",
+    "plugin_runtime": [
+      "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills"
+    ]
+  },
+  "counts": {
+    "desktop_entries": 139,
+    "runtime_entries": 118,
+    "plugin_entries": 17,
+    "tool_entries": 18
+  },
+  "skills": [
+    {
+      "name": "imagegen",
+      "description": "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas.",
+      "path": "/Users/xingxuan/.codex/skills/.system/imagegen/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/.system/imagegen"
+    },
+    {
+      "name": "openai-docs",
+      "description": "Use for Codex models/pricing, scheduled tasks, skills, settings, setup, troubleshooting, customization, automations, and self-knowledge—including 'you,' 'your,' 'this app,' or 'this coding agent' when they refer to Codex—and for OpenAI APIs/products and ChatGPT Work. Also use for model choice/migration, prompting, SDKs, Responses, Realtime, agents, evals, and Chat/Work/Codex comparisons. Do not use for generic app/software tasks that merely mention Codex.",
+      "path": "/Users/xingxuan/.codex/skills/.system/openai-docs/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/.system/openai-docs"
+    },
+    {
+      "name": "plugin-creator",
+      "description": "Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, valid manifest defaults, and personal-marketplace entries by default. Use when Codex needs to create a new personal plugin, add optional plugin structure, generate or update marketplace entries for plugin ordering and availability metadata, or update an existing local plugin during development with the CLI-driven cachebuster and reinstall flow.",
+      "path": "/Users/xingxuan/.codex/skills/.system/plugin-creator/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/.system/plugin-creator"
+    },
+    {
+      "name": "review-agent",
+      "description": "Perform a read-only, defect-first review of a specified code change and return every actionable finding. Use when another agent delegates review of uncommitted changes, a base-branch diff, a commit, or custom review instructions.",
+      "path": "/Users/xingxuan/.codex/skills/.system/review-agent/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/.system/review-agent"
+    },
+    {
+      "name": "skill-creator",
+      "description": "Create or update a Codex skill with appropriately scoped instructions and any needed supporting resources.",
+      "path": "/Users/xingxuan/.codex/skills/.system/skill-creator/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/.system/skill-creator"
+    },
+    {
+      "name": "skill-installer",
+      "description": "Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).",
+      "path": "/Users/xingxuan/.codex/skills/.system/skill-installer/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/.system/skill-installer"
+    },
+    {
+      "name": "active-agent",
+      "description": "用户说\"直接帮我做\"时，自主拆解任务、循环执行、处理障碍并汇报结果，无需反复确认",
+      "path": "/Users/xingxuan/.codex/skills/active-agent/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/active-agent"
+    },
+    {
+      "name": "ad-copywriting",
+      "description": "撰写品牌合作商单文案，含完整brief解读、角度选择方法和小红书/微信/视频号平台专属结构模板",
+      "path": "/Users/xingxuan/.codex/skills/ad-copywriting/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/ad-copywriting"
+    },
+    {
+      "name": "advanced-xhs-visual-design",
+      "description": "将内容转成小红书或公众号图文卡片方案，或生成封面、海报、信息图与概念图提示词；适用于视觉策划和提示词设计，不负责实际生图、发布或账号操作。",
+      "path": "/Users/xingxuan/.codex/skills/advanced-xhs-visual-design/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/advanced-xhs-visual-design"
+    },
+    {
+      "name": "agent-eval-loop",
+      "description": "为 AI 代理输出设计评测标准、自检表和迭代闭环，适合测试写作、代码、分析、自动化代理是否稳定可用。",
+      "path": "/Users/xingxuan/.codex/skills/agent-eval-loop/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/agent-eval-loop"
+    },
+    {
+      "name": "ai-animation-factory",
+      "description": "茂茂 AI 动画工厂：把一句话、故事或参考片变成经过方向审计、角色/场景/分镜/动作/声音/剪辑与独立验收的动画短片；适用于不会专业流程、需要总经理自动补齐制作环节的任务。",
+      "path": "/Users/xingxuan/.codex/skills/ai-animation-factory/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/ai-animation-factory"
+    },
+    {
+      "name": "ai-master",
+      "description": "作为茂茂的 AI 总经理，负责目标纠偏、选择和调度 AI、生产、独立审计、返工、交付与复盘；也用于审查、验证并沉淀 AI 实践方法。当用户说“总经理”、要求学习帖子、完成复杂 AI 任务、调度其他 AI、审计方向或让系统成长时使用。",
+      "path": "/Users/xingxuan/.codex/skills/ai-master/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/ai-master"
+    },
+    {
+      "name": "ai-master-manager",
+      "description": "总经理的显式入口。用户要做任何复杂任务、需要补齐认知、选择工具、检查方向、调用本机技能或安排独立审计时使用。它先读取并执行 ai-master 的总经理流程，再决定是否调用动画工厂、研究、剪辑、配音或其他员工；不得跳过方向审计、能力探针、最小验证和风险门。",
+      "path": "/Users/xingxuan/.codex/skills/ai-master-manager/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/ai-master-manager"
+    },
+    {
+      "name": "ai-master-toolkit",
+      "description": "总经理的能力桥接层。把目标语义转换成任务族、方向审计、技能依赖、工具探针、风险门和交付验收；优先调用能力图与已验证工具，不依赖用户记忆技能关键词。适用于“帮我调度工具”“判断该用什么 AI”“先排雷再做”“检查我有哪些技能”“缺工具就补齐”等请求。",
+      "path": "/Users/xingxuan/.codex/skills/ai-master-toolkit/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/ai-master-toolkit"
+    },
+    {
+      "name": "ai-polish",
+      "description": "检测并修复中文内容中的AI写作特征，逐类诊断后重写，让文章读起来像真人写的",
+      "path": "/Users/xingxuan/.codex/skills/ai-polish/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/ai-polish"
+    },
+    {
+      "name": "ai-task-compiler",
+      "description": "将模糊、复杂或高风险的口语需求编译成经过目标校正、工具选择、最小验证和权限审查的机器可校验任务合同；适用于多文件、长期工程、批处理、代码、外部数据或正式交付，不用于无需工程化的简单问答和轻微文字修改。",
+      "path": "/Users/xingxuan/.codex/skills/ai-task-compiler/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/ai-task-compiler"
+    },
+    {
+      "name": "animation-dream-factory",
+      "description": "“动画梦工厂”的显式调用入口；这是茂茂动画工厂的同义别名，用于从故事或场景目标制作动画，不代表未经验证的一键量产能力。",
+      "path": "/Users/xingxuan/.codex/skills/animation-dream-factory/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/animation-dream-factory"
+    },
+    {
+      "name": "animation-factory",
+      "description": "“动画工厂”的显式调用入口。把一句话、故事或参考片交给茂茂动画工厂，自动补齐剧本、角色定妆与视图、场景、分镜、动作、声音、剪辑和独立验收；适用于不会专业流程但要做动画短片的用户。",
+      "path": "/Users/xingxuan/.codex/skills/animation-factory/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/animation-factory"
+    },
+    {
+      "name": "api-gateway",
+      "description": "调用没有专用连接器的 REST 或 GraphQL API，处理认证、分页、限流和响应解析；适用于读取数据或用户明确授权的写入，不替代本会话已有的专用连接器。",
+      "path": "/Users/xingxuan/.codex/skills/api-gateway/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/api-gateway"
+    },
+    {
+      "name": "asset-allocation-risk-review",
+      "description": "从现金流、期限、集中度、流动性和风险承受能力角度复盘家庭或企业资产配置，不提供具体交易建议。",
+      "path": "/Users/xingxuan/.codex/skills/asset-allocation-risk-review/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/asset-allocation-risk-review"
+    },
+    {
+      "name": "best-minds",
+      "description": "模拟器思维：不问\"你怎么看\"，而是问\"世界上谁最懂这个？TA 会怎么说？\"。触发词：最强大脑、顶级专家、世界级、best minds、谁最懂这个",
+      "path": "/Users/xingxuan/.codex/skills/best-minds/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/best-minds"
+    },
+    {
+      "name": "better-accessibility",
+      "description": "Helps your project comply with accessibility standards and best practices.",
+      "path": "/Users/xingxuan/.codex/skills/better-accessibility/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/better-accessibility"
+    },
+    {
+      "name": "better-colors",
+      "description": "Helps you build a color system and answer anything about color in your project. You can generate palettes, use semantic tokens, convert between formats, check contrast and more.",
+      "path": "/Users/xingxuan/.codex/skills/better-colors/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/better-colors"
+    },
+    {
+      "name": "better-interface",
+      "description": "Combines all of the `better-*` skills into a single review across accessibility, layout, writing, typography, color and UI polish.",
+      "path": "/Users/xingxuan/.codex/skills/better-interface/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/better-interface"
+    },
+    {
+      "name": "better-layout",
+      "description": "Helps with grouping, alignment, reading order, progressive disclosure and other details that make a good layout.",
+      "path": "/Users/xingxuan/.codex/skills/better-layout/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/better-layout"
+    },
+    {
+      "name": "better-typography",
+      "description": "Focuses on type scale, spacing, sizing, variable fonts, OpenType features, wrapping, truncation and other details that make typography feel great across your product.",
+      "path": "/Users/xingxuan/.codex/skills/better-typography/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/better-typography"
+    },
+    {
+      "name": "better-ui",
+      "description": "Polishes and improves the UI in your project. Covers concentric border radius, optical alignment, surface depth, contextual icons, hit areas and more.",
+      "path": "/Users/xingxuan/.codex/skills/better-ui/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/better-ui"
+    },
+    {
+      "name": "better-writing",
+      "description": "Focuses on improving product copy in your project.",
+      "path": "/Users/xingxuan/.codex/skills/better-writing/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/better-writing"
+    },
+    {
+      "name": "brand-voice-system",
+      "description": "沉淀个人 IP 或品牌的表达风格、禁用词、常用句式和改写规则，适合团队长期稳定产出内容。",
+      "path": "/Users/xingxuan/.codex/skills/brand-voice-system/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/brand-voice-system"
+    },
+    {
+      "name": "break",
+      "description": "Renders a component you choose in every state and scenario on a temporary page and stress tests it.",
+      "path": "/Users/xingxuan/.codex/skills/break/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/break"
+    },
+    {
+      "name": "browser-automation",
+      "description": "通过当前可用的真实浏览器能力执行导航、表单填写、点击和动态页面提取；适用于必须使用登录态或网页交互的任务，不替代可用的专用连接器或 API。",
+      "path": "/Users/xingxuan/.codex/skills/browser-automation/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/browser-automation"
+    },
+    {
+      "name": "browser-research-agent",
+      "description": "用浏览器检索、对比、摘录网页并生成来源清单，适合产品调研、竞品分析、资料搜集和网页验证。",
+      "path": "/Users/xingxuan/.codex/skills/browser-research-agent/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/browser-research-agent"
+    },
+    {
+      "name": "business-dashboard-analyst",
+      "description": "分析营收、线索、转化、交付、退款和现金流仪表盘，适合知识付费、小团队和内容业务经营复盘。",
+      "path": "/Users/xingxuan/.codex/skills/business-dashboard-analyst/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/business-dashboard-analyst"
+    },
+    {
+      "name": "code-review-ci",
+      "description": "审查 PR、定位 CI 失败并给出可执行修复方案，适合代码上线前检查、测试失败排查和团队协作。",
+      "path": "/Users/xingxuan/.codex/skills/code-review-ci/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/code-review-ci"
+    },
+    {
+      "name": "coding-agent",
+      "description": "Delegates a coding task to a specialized sub-agent when the user provides",
+      "path": "/Users/xingxuan/.codex/skills/coding-agent/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/coding-agent"
+    },
+    {
+      "name": "content-repurposing",
+      "description": "把一篇长内容拆成公众号、小红书、短视频脚本、朋友圈和社群素材，适合一次创作多平台分发。",
+      "path": "/Users/xingxuan/.codex/skills/content-repurposing/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/content-repurposing"
+    },
+    {
+      "name": "content-rewrite",
+      "description": "将爆款参考内容改写为原创风格，保留有效结构和核心逻辑，替换全部表达、案例和比喻",
+      "path": "/Users/xingxuan/.codex/skills/content-rewrite/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/content-rewrite"
+    },
+    {
+      "name": "content-scraper",
+      "description": "从用户提供的社交媒体链接或检索目标中提取可访问的正文、元数据和评论；适用于小红书、微博、知乎、Bilibili 与 X，不用于绕过登录、付费墙或访问控制。",
+      "path": "/Users/xingxuan/.codex/skills/content-scraper/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/content-scraper"
+    },
+    {
+      "name": "context-engineering-agent",
+      "description": "为复杂任务整理长期上下文、规则、约束和交付标准，适合项目启动、交接、代理反复跑偏、需要把零散资料变成可复用上下文包的场景。",
+      "path": "/Users/xingxuan/.codex/skills/context-engineering-agent/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/context-engineering-agent"
+    },
+    {
+      "name": "cool-webpage",
+      "description": "在网站、网页、HTML 课件或交互页面任务中，只要用户明确说出‘酷炫’或‘酷炫网页’就调用。制作三层世界缩放、非等宽拼图总览、差异化内页与点击式互动分镜；不用于用户没有提出酷炫要求的普通网页。",
+      "path": "/Users/xingxuan/.codex/skills/cool-webpage/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/cool-webpage"
+    },
+    {
+      "name": "course-design-agent",
+      "description": "把一个能力目标设计成课程大纲、作业、案例和交付标准，适合训练营、知识付费课和企业内训。",
+      "path": "/Users/xingxuan/.codex/skills/course-design-agent/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/course-design-agent"
+    },
+    {
+      "name": "dan-koe-inspired-writing",
+      "description": "将个人洞察写成具有认知反转、身份张力、解释模型和行动协议的原创中文长文或图文脚本；适合公众号、X 长文、知识型个人 IP 与内容矩阵，不用于逐句模仿 Dan Koe 或复制其受版权保护的表达。",
+      "path": "/Users/xingxuan/.codex/skills/dan-koe-inspired-writing/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/dan-koe-inspired-writing"
+    },
+    {
+      "name": "docx-report-builder",
+      "description": "生成可交付的 DOCX 报告结构、正文、表格和审阅清单，适合咨询报告、调研报告、课程讲义和项目复盘。",
+      "path": "/Users/xingxuan/.codex/skills/docx-report-builder/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/docx-report-builder"
+    },
+    {
+      "name": "dynamic-data",
+      "description": "一套模板驱动的数据可视化与报告生成 skill，既能严格从 Lupi、Basics、Glance、Maps 与 Interactive gallery 的真实实现生成 HTML 图表，也能从 12 套中英文整页报告模板生成可发布的 HTML 报告；以 Mono 为保底，能按数据语义自动选择内置彩色预设，也支持用户明确提供的自定义色板。地图仅在用户明确要求时启用，同一交付禁止混用色系。",
+      "path": "/Users/xingxuan/.codex/skills/dynamic-data/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/dynamic-data"
+    },
+    {
+      "name": "dynamic-memory",
+      "description": "把文章、诗文、品牌叙事或产品旅程做成会被记住的动态网页世界：用滚动、镜头、空间转场与有质感的环境动效，让观众像进入一段记忆一样经历内容。适用于动态记忆、沉浸式叙事、滚动世界、穿越式页面、镜头推进、视频滚动、Three.js 空间或带花瓣等环境粒子的网页；不用于只需要普通分区排版的页面。",
+      "path": "/Users/xingxuan/.codex/skills/dynamic-memory/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/dynamic-memory"
+    },
+    {
+      "name": "editable-pptx-builder",
+      "description": "生成可编辑 PPTX 文件结构、页面文案、图表和设计说明，适合课程发布、商业汇报、路演和研究报告。",
+      "path": "/Users/xingxuan/.codex/skills/editable-pptx-builder/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/editable-pptx-builder"
+    },
+    {
+      "name": "elegant-style",
+      "description": "仅当用户在当前命令中明确说出“优雅风格”四个字时调用。把 Lieflat Charts 的字体、留白、细线、信息秩序、配色和动效语言应用于当前交付；核心能力是模板驱动的 HTML 图表、可视化与报告，也可作为网站、PPT 等视觉交付的审美层。未出现完整口令“优雅风格”时不得自动触发。",
+      "path": "/Users/xingxuan/.codex/skills/elegant-style/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/elegant-style"
+    },
+    {
+      "name": "enterprise-strategy-analysis",
+      "description": "面向企业金融和经营诊断的策略分析工作流，用于整理行业、公司、财务、竞争和银行服务切入点。",
+      "path": "/Users/xingxuan/.codex/skills/enterprise-strategy-analysis/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/enterprise-strategy-analysis"
+    },
+    {
+      "name": "explain-interface",
+      "description": "Helps you figure out how something was built on the web.",
+      "path": "/Users/xingxuan/.codex/skills/explain-interface/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/explain-interface"
+    },
+    {
+      "name": "falling-leaves",
+      "description": "Build falling leaves that read as leaves, with each one tumbling on its own axis so it presents a face, thins to an edge, and opens out again, and with its sideways slip driven by that same tumble. Covers the 2-D canvas build and the instanced-3-D variant, where leaves are recycled from, density-versus-count maths, depth layering, colour under a tone-mapped composite, reduced motion, and visibility pausing. Use for autumn maple, sakura petals, blossom, ash, snowfall shapes, or any drifting foliage where a generic particle field reads as confetti.",
+      "path": "/Users/xingxuan/.codex/skills/falling-leaves/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/falling-leaves"
+    },
+    {
+      "name": "finance-assistant",
+      "description": "Financial analysis for knowledge payment and online education businesses",
+      "path": "/Users/xingxuan/.codex/skills/finance-assistant/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/finance-assistant"
+    },
+    {
+      "name": "financial-modeling",
+      "description": "面向学习、投研和企业分析演示的财务建模工作流，用于搭建三表、DCF、情景分析和模型审查清单。",
+      "path": "/Users/xingxuan/.codex/skills/financial-modeling/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/financial-modeling"
+    },
+    {
+      "name": "financial-risk-literacy",
+      "description": "识别常见金融产品、贷款、保险、投资宣传和现金流决策中的风险点，输出面向普通人的风险说明与核查清单。",
+      "path": "/Users/xingxuan/.codex/skills/financial-risk-literacy/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/financial-risk-literacy"
+    },
+    {
+      "name": "grok-marketing-bots",
+      "description": "研究并生成 SEO、LinkedIn/X、短视频和广告营销草稿；适用于用户提到 Grok Bot、营销机器人或希望建立研究—创作—反馈闭环时。默认不发布、不投放、不付费。",
+      "path": "/Users/xingxuan/.codex/skills/grok-marketing-bots/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/grok-marketing-bots"
+    },
+    {
+      "name": "hook-angle-lab",
+      "description": "为文章、短视频、直播和课程设计高点击选题角度和开头钩子，适合选题会、内容改题和爆款复盘。",
+      "path": "/Users/xingxuan/.codex/skills/hook-angle-lab/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/hook-angle-lab"
+    },
+    {
+      "name": "hot-interview-radar",
+      "description": "搜集近期已有热度的全球人物访谈，核验官方原片、热点证据和准确时间码，生成带中文解读角度、风险和制作难度的短视频候选决策包。适用于热点访谈雷达、名人观点切片、海外内容中文二创；不用于单纯搬运或仅剪辑用户已指定的视频。",
+      "path": "/Users/xingxuan/.codex/skills/hot-interview-radar/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/hot-interview-radar"
+    },
+    {
+      "name": "humanizer",
+      "description": "|",
+      "path": "/Users/xingxuan/.codex/skills/humanizer/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/humanizer"
+    },
+    {
+      "name": "insight",
+      "description": "【洞察】 战略洞察 - 用户的“战略合伙人”对话系统。触发场景：",
+      "path": "/Users/xingxuan/.codex/skills/insight/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/insight"
+    },
+    {
+      "name": "interface-review",
+      "description": "Reviews your work across multiple categories like UI, typography, layout, color, writing and accessibility and gives you a detailed analysis of the findings.",
+      "path": "/Users/xingxuan/.codex/skills/interface-review/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/interface-review"
+    },
+    {
+      "name": "investment-risk-review",
+      "description": "面向学习交流的投资风险辨析工作流，用于审查荐股内容、投研工具、产品宣传和 AI 投资输出的风险边界。",
+      "path": "/Users/xingxuan/.codex/skills/investment-risk-review/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/investment-risk-review"
+    },
+    {
+      "name": "knowledge-cards",
+      "description": "将人物、行业术语、产品概念或知识主题制作成结构化 JSON 和可滑动 HTML 卡片；适用于释义卡、知识卡和卡片流，不用于普通文章或单张海报。",
+      "path": "/Users/xingxuan/.codex/skills/knowledge-cards/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/knowledge-cards"
+    },
+    {
+      "name": "knowledge-palace",
+      "description": "【知识宫殿】 知识宫殿 - 战略认知更新系统。触发场景：",
+      "path": "/Users/xingxuan/.codex/skills/knowledge-palace/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/knowledge-palace"
+    },
+    {
+      "name": "last30days",
+      "description": "调研某个主题最近 30 天的公开讨论、新闻、视频和趋势并综合来源；适用于“最近30天”“last30”或近期趋势请求，不用于历史综述或无需时效性的常识问题。",
+      "path": "/Users/xingxuan/.codex/skills/last30days/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/last30days"
+    },
+    {
+      "name": "lead-followup-automation",
+      "description": "自动整理销售线索、生成跟进话术和下一步动作，适合私域、课程咨询、企业服务和合作机会跟进。",
+      "path": "/Users/xingxuan/.codex/skills/lead-followup-automation/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/lead-followup-automation"
+    },
+    {
+      "name": "learning-loop",
+      "description": "把学习材料转成练习、复盘、错题和下次行动，适合读书、课程学习、技能训练和考试准备。",
+      "path": "/Users/xingxuan/.codex/skills/learning-loop/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/learning-loop"
+    },
+    {
+      "name": "market-monitoring",
+      "description": "面向学习和演示的只读看盘盯盘工作流，用于整理行情、新闻、公告、财报和风险事件，不触发真实交易。",
+      "path": "/Users/xingxuan/.codex/skills/market-monitoring/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/market-monitoring"
+    },
+    {
+      "name": "market-research-analyst",
+      "description": "对行业、竞品、用户、价格和渠道进行结构化市场调研，适合新项目判断、课程选题和产品定位。",
+      "path": "/Users/xingxuan/.codex/skills/market-research-analyst/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/market-research-analyst"
+    },
+    {
+      "name": "mcp-builder",
+      "description": "把外部系统封装成 Agent 可调用的 MCP 工具，适合连接数据库、业务系统、文件服务和第三方 API。",
+      "path": "/Users/xingxuan/.codex/skills/mcp-builder/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/mcp-builder"
+    },
+    {
+      "name": "meeting-notes-actions",
+      "description": "从会议、访谈、语音转写中提取结论、争议、行动项和负责人，适合团队会议和客户访谈整理。",
+      "path": "/Users/xingxuan/.codex/skills/meeting-notes-actions/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/meeting-notes-actions"
+    },
+    {
+      "name": "memory-boost",
+      "description": "在用户提供或指定的项目笔记、决策记录和历史材料中检索、汇总或写入跨会话上下文；不声称拥有未连接的长期记忆，也不访问未授权的数据源。",
+      "path": "/Users/xingxuan/.codex/skills/memory-boost/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/memory-boost"
+    },
+    {
+      "name": "mimeng-topic-method",
+      "description": "用咪蒙选题法筛选和改造选题：三个硬指标（覆盖面、争议性、获得感）+ 情绪矩阵 + 二次加工，把普通干货题改成有传播势能的爆款题。适合公众号、小红书、短视频的选题会、改题和复盘。",
+      "path": "/Users/xingxuan/.codex/skills/mimeng-topic-method/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/mimeng-topic-method"
+    },
+    {
+      "name": "multi-agent-orchestrator",
+      "description": "把复杂任务拆给研究、执行、审查、写作等多个角色代理并整合结果，适合高复杂度交付和多线程推进。",
+      "path": "/Users/xingxuan/.codex/skills/multi-agent-orchestrator/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/multi-agent-orchestrator"
+    },
+    {
+      "name": "notes-research",
+      "description": "查询历史笔记支持研究与写作，多角度检索、相关性评估、综合摘要并标注来源。",
+      "path": "/Users/xingxuan/.codex/skills/notes-research/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/notes-research"
+    },
+    {
+      "name": "novel-art",
+      "description": "|",
+      "path": "/Users/xingxuan/.codex/skills/novel-art/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/novel-art"
+    },
+    {
+      "name": "novel-characters",
+      "description": "|",
+      "path": "/Users/xingxuan/.codex/skills/novel-characters/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/novel-characters"
+    },
+    {
+      "name": "novel-outline",
+      "description": "|",
+      "path": "/Users/xingxuan/.codex/skills/novel-outline/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/novel-outline"
+    },
+    {
+      "name": "novel-script",
+      "description": "|",
+      "path": "/Users/xingxuan/.codex/skills/novel-script/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/novel-script"
+    },
+    {
+      "name": "novel-storyboard",
+      "description": "|",
+      "path": "/Users/xingxuan/.codex/skills/novel-storyboard/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/novel-storyboard"
+    },
+    {
+      "name": "obsidian",
+      "description": "Work with Obsidian vaults (plain Markdown notes) and automate via obsidian-cli.",
+      "path": "/Users/xingxuan/.codex/skills/obsidian/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/obsidian"
+    },
+    {
+      "name": "original-writing",
+      "description": "从零创作3000-8000字原创长文，包含受众分析、差异化角度策划、张力弧线结构和强钩子写作",
+      "path": "/Users/xingxuan/.codex/skills/original-writing/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/original-writing"
+    },
+    {
+      "name": "personal-investment-workflow",
+      "description": "面向学习交流的个人投资研究与复盘工作流，用于整理公开信息、持仓假设、风险清单和周报，不输出买卖建议。",
+      "path": "/Users/xingxuan/.codex/skills/personal-investment-workflow/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/personal-investment-workflow"
+    },
+    {
+      "name": "proactive-agent",
+      "description": "在用户目标明确但未给出完整步骤时，主动发现依赖、风险和后续机会并推进当前任务；不用于创建未经请求的自动化、外部写入或扩大任务范围。",
+      "path": "/Users/xingxuan/.codex/skills/proactive-agent/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/proactive-agent"
+    },
+    {
+      "name": "quant-trading-literacy",
+      "description": "面向学习交流的量化交易认知工作流，用于解释策略、回测、过拟合、滑点、交易成本和风控边界。",
+      "path": "/Users/xingxuan/.codex/skills/quant-trading-literacy/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/quant-trading-literacy"
+    },
+    {
+      "name": "repo-context-compiler",
+      "description": "为大型代码库生成给 AI 读取的模块图、入口地图和上下文包，适合代理反复读仓库、找不到边界的场景。",
+      "path": "/Users/xingxuan/.codex/skills/repo-context-compiler/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/repo-context-compiler"
+    },
+    {
+      "name": "research-to-article",
+      "description": "把网页、论文、访谈、笔记和社媒讨论整理成可发布长文，适合公众号、知乎、课程讲义和深度报告。",
+      "path": "/Users/xingxuan/.codex/skills/research-to-article/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/research-to-article"
+    },
+    {
+      "name": "self-improvement",
+      "description": "将用户纠正、重复失败和已验证的新方法整理成可复用学习记录；适用于用户明确要求复盘或同类问题反复出现，不自动修改全局规则、Hook 或其他 Skill。",
+      "path": "/Users/xingxuan/.codex/skills/self-improvement/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/self-improvement"
+    },
+    {
+      "name": "short-video-script-lab",
+      "description": "把选题转成可拍摄短视频脚本、分镜和口播稿，适合知识类、观点类、课程引流类短视频。",
+      "path": "/Users/xingxuan/.codex/skills/short-video-script-lab/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/short-video-script-lab"
+    },
+    {
+      "name": "skill-finder",
+      "description": "根据任务目标筛选、比较和安装合适的 Agent Skill，适合面对大量技能仓库、插件市场和本地技能库时做选择。",
+      "path": "/Users/xingxuan/.codex/skills/skill-finder/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/skill-finder"
+    },
+    {
+      "name": "skill-vetter",
+      "description": "Audits a SKILL.md and its scripts for security risks before installation.",
+      "path": "/Users/xingxuan/.codex/skills/skill-vetter/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/skill-vetter"
+    },
+    {
+      "name": "social-media-strategy",
+      "description": "分析账号定位、内容结构、平台差异和增长动作，适合公众号、小红书、视频号、抖音和 LinkedIn 运营复盘。",
+      "path": "/Users/xingxuan/.codex/skills/social-media-strategy/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/social-media-strategy"
+    },
+    {
+      "name": "songwriting-and-ai-music",
+      "description": "Songwriting craft and Suno AI music prompts.",
+      "path": "/Users/xingxuan/.codex/skills/songwriting-and-ai-music/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/songwriting-and-ai-music"
+    },
+    {
+      "name": "sonoscli",
+      "description": "CLI-driven office workflow management that routes tasks, calendar, meeting",
+      "path": "/Users/xingxuan/.codex/skills/sonoscli/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/sonoscli"
+    },
+    {
+      "name": "spreadsheet-analyst",
+      "description": "清洗 Excel/CSV 表格，生成透视、指标、异常点和经营解释，适合销售、投放、财务和运营数据。",
+      "path": "/Users/xingxuan/.codex/skills/spreadsheet-analyst/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/spreadsheet-analyst"
+    },
+    {
+      "name": "suno-songwriter",
+      "description": "Use this skill when the user wants to write, revise, remix, translate, adapt, or prompt a song, lyric, hook, chorus, verse, rap, ballad, instrumental, Suno track, or AI-music prompt. Prioritize strong original lyrics: hook-first, singable, concrete, structured, and ready for Suno v5.5 Custom Mode. Also covers vocal Style and Excluded Styles, vocal/custom sliders, multilingual lyrics, lofi and OST cues, anime or TV themes, lyric remixes, artist-style/cadence fingerprints without copying lyrics, reusable personas, albums, Suno Sounds samples, cover art, and animated covers. Not for music theory, DAW mixing, or licensing.",
+      "path": "/Users/xingxuan/.codex/skills/suno-songwriter/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/suno-songwriter"
+    },
+    {
+      "name": "variant",
+      "description": "Builds multiple variants of a component you're working on and helps you iterate and pick one.",
+      "path": "/Users/xingxuan/.codex/skills/variant/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/variant"
+    },
+    {
+      "name": "video-account-analysis",
+      "description": "分析微信视频号后台数据截图，提取关键指标、对标行业基准并给出可执行优化建议。",
+      "path": "/Users/xingxuan/.codex/skills/video-account-analysis/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/video-account-analysis"
+    },
+    {
+      "name": "video-transcribe",
+      "description": "Downloads video audio using yt-dlp and transcribes to text with Whisper",
+      "path": "/Users/xingxuan/.codex/skills/video-transcribe/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/video-transcribe"
+    },
+    {
+      "name": "visual-moment",
+      "description": "仅当用户在当前命令中明确说出“视觉瞬间”四个字时调用。为网站与界面建立与题材高度相关的视觉身份，并设计一个令人记住的核心画面、动效或交互时刻；未出现完整口令“视觉瞬间”时不得自动触发。",
+      "path": "/Users/xingxuan/.codex/skills/visual-moment/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/visual-moment"
+    },
+    {
+      "name": "wealth-advisor",
+      "description": "面向学习和客户沟通演示的财富顾问工作流，用于整理资产负债、现金流、目标和风险偏好，生成结构化沟通报告。",
+      "path": "/Users/xingxuan/.codex/skills/wealth-advisor/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/wealth-advisor"
+    },
+    {
+      "name": "web-story",
+      "description": "把一个选题、想法或研究目标做成单页叙事网页（手机+电脑双端适配）。当用户说\"把这个选题做成网页\"、\"做个网页介绍\"、\"把研究结果做成网站\"、\"做个观察站/指南页/落地页\"、\"网页故事\"、或给出一个主题要生成可视化网页时触发。轻流程：接题",
+      "path": "/Users/xingxuan/.codex/skills/web-story/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/web-story"
+    },
+    {
+      "name": "wechat-content-pipeline",
+      "description": "公众号内容总控流水线。用户说“跑公众号流水线”“公众号工厂”“公众号快速写”“公众号做贴图”“继续上次公众号流水线”，或明确要求从选题、标题、长文、去AI味、多平台拆分、图文卡片到发布准备的一站式交付时使用；单纯修改一句话、只问写作知识或未要求公众号交付时不使用。",
+      "path": "/Users/xingxuan/.codex/skills/wechat-content-pipeline/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/wechat-content-pipeline"
+    },
+    {
+      "name": "wechat-mp-auto",
+      "description": "创作、排版或发布微信公众号长文与贴图素材；适用于用户明确提到公众号写作、排版或发布，不用于小红书、视频脚本或其他平台。",
+      "path": "/Users/xingxuan/.codex/skills/wechat-mp-auto/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/wechat-mp-auto"
+    },
+    {
+      "name": "workflow-automation-builder",
+      "description": "把重复办公流程拆成触发器、步骤、工具、异常处理和验收标准，适合运营、销售、内容和管理自动化。",
+      "path": "/Users/xingxuan/.codex/skills/workflow-automation-builder/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/workflow-automation-builder"
+    },
+    {
+      "name": "xiaohongshu-auto",
+      "description": "准备并通过已登录浏览器发布小红书图文笔记；适用于用户明确要求发布或定时发布，不用于仅写文案、做主页诊断或规划选题。",
+      "path": "/Users/xingxuan/.codex/skills/xiaohongshu-auto/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/xiaohongshu-auto"
+    },
+    {
+      "name": "xiaohongshu-conversion-path",
+      "description": ">",
+      "path": "/Users/xingxuan/.codex/skills/xiaohongshu-conversion-path/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/xiaohongshu-conversion-path"
+    },
+    {
+      "name": "xiaohongshu-profile",
+      "description": ">",
+      "path": "/Users/xingxuan/.codex/skills/xiaohongshu-profile/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/xiaohongshu-profile"
+    },
+    {
+      "name": "xiaohongshu-topic-planner",
+      "description": ">",
+      "path": "/Users/xingxuan/.codex/skills/xiaohongshu-topic-planner/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/xiaohongshu-topic-planner"
+    },
+    {
+      "name": "xingye-music-company",
+      "description": "运行“星野音乐公司”的真实多角色协作、创作、生成、审核、董事长反馈归因与员工成长；适用于歌曲、轻音乐、专辑、配乐和 AI 音乐项目，不用于普通音乐知识问答。",
+      "path": "/Users/xingxuan/.codex/skills/xingye-music-company/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/xingye-music-company"
+    },
+    {
+      "name": "xingye-web-company",
+      "description": "运行“星野 AI 网站公司”的真实多智能体协作系统；当用户要求调用星野网站公司，或明确要求以工业级团队完成网站研究、测量、策划、设计、开发、审核、返工与项目复盘时使用。不用于普通的一次性网站知识问答。",
+      "path": "/Users/xingxuan/.codex/skills/xingye-web-company/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/xingye-web-company"
+    },
+    {
+      "name": "xingye-wechat-writer-company",
+      "description": "运行茂茂公众号写手公司，由当前Codex按茂茂下沉市场写作规则完成画像、标题、正文、配图规划、证据审查和终稿；适用于公众号文章与写作反馈迭代，除非茂茂明确要求，否则不调用Kimi或多AI工作流。",
+      "path": "/Users/xingxuan/.codex/skills/xingye-wechat-writer-company/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/xingye-wechat-writer-company"
+    },
+    {
+      "name": "maomao-animation-studio",
+      "description": "茂茂动画工厂：把一句场景描述、故事或表现要求制作成完整动画短片，统筹剧本台词、角色场景、分镜运镜、提示词、动画生成、配音口型、剪辑、音乐音效、字幕、独立审核与导出；也用于激烈打斗、武器战、追击、打击感与动作预演。用于“一句话做动画”“一键出片”“动画全流程”；仅咨询工具时不启动制作。",
+      "path": "/Users/xingxuan/.codex/skills/maomao-animation-studio/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/maomao-animation-studio"
+    },
+    {
+      "name": "maomao-expression-coach",
+      "description": "运行茂茂AI表达课程：支持查看课程、直接选择第1—6课、从上次进度继续、记录Score与学习成果；训练小白逐步学会完整下令、监督任务、一人AI公司、多AI审计、工具环境和知识迭代，不替用户完成本应亲自表达的训练。",
+      "path": "/Users/xingxuan/.codex/skills/maomao-expression-coach/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/maomao-expression-coach"
+    },
+    {
+      "name": "maomao-multi-ai-production",
+      "description": "按茂茂明确指令启动跨模型生产闭环，把复杂工程依次编译为合同、执行、独立审计、有限返工和茂茂验收；适用于网站、软件、公司系统和跨平台自动化，不用于公众号写作、普通内容生产、问答和轻量修改。",
+      "path": "/Users/xingxuan/.codex/skills/maomao-multi-ai-production/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/maomao-multi-ai-production"
+    },
+    {
+      "name": "maomao-ppt",
+      "description": "将主题、文章、课程或汇报材料转成高审美中文 PPT 方案；支持有图增强版和无图稳态版，适合课程、发布、研究报告、商业汇报和个人演讲。",
+      "path": "/Users/xingxuan/.codex/skills/maomao-ppt/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/maomao-ppt"
+    },
+    {
+      "name": "maomao-screenshot-news-video",
+      "description": "把可核验的 X 原帖或新闻原始截图制作成“茂茂观察”竖屏资讯视频，并同时交付证据清单、强钩子脚本、丝滑运动与合规音轨；适用于截屏资讯、原帖实拍视频和图片转短视频，不用于无法核验来源的还原卡或伪造评论。",
+      "path": "/Users/xingxuan/.codex/skills/maomao-screenshot-news-video/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/maomao-screenshot-news-video"
+    },
+    {
+      "name": "maomao-skill-creator",
+      "description": "为 Claude Code 或其他兼容 SKILL.md 的代理设计旧式 Skill；仅在用户明确指定非 Codex 目标平台时使用，创建或优化 Codex Skill 应使用官方 skill-creator。",
+      "path": "/Users/xingxuan/.codex/skills/maomao-skill-creator/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/maomao-skill-creator"
+    },
+    {
+      "name": "maomao-thinking",
+      "description": "【maomao-thinking】 茂茂商业思考（maomao thinking）— 面向内容型个人IP、小团队知识付费、直播成交、平台经营、产品迭代与AI无人公司的统一商业判断",
+      "path": "/Users/xingxuan/.codex/skills/maomao-thinking/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/maomao-thinking"
+    },
+    {
+      "name": "maomao-x-evidence-collector",
+      "description": "通过 ego lite 已登录的 X 会话采集指定原帖、互动数据和真实评论，保存原始截图、结构化证据与标准 ZIP；适用于 Kimi/Codex/终端给“茂茂观察”视频准备可核验素材，不用于自动关注、发帖或绕过登录验证。",
+      "path": "/Users/xingxuan/.codex/skills/maomao-x-evidence-collector/SKILL.md",
+      "source": "codex-runtime",
+      "folder": "/Users/xingxuan/.codex/skills/maomao-x-evidence-collector"
+    },
+    {
+      "name": "context-engineering-agent",
+      "description": "为复杂任务整理长期上下文、规则、约束和交付标准，适合项目启动、交接、代理反复跑偏、需要把零散资料变成可复用上下文包的场景。",
+      "path": "/Users/xingxuan/Desktop/skills 库/01-AI增强/上下文工程代理（context-engineering-agent）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/01-AI增强/上下文工程代理（context-engineering-agent）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/context-engineering-agent/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "proactive-agent",
+      "description": "Transform AI agents from task-followers into proactive partners that anticipate needs and continuously improve. Now with WAL Protocol, Working Buffer, Autonomous Crons, and battle-tested patterns. Part of the Hal Stack 🦞",
+      "path": "/Users/xingxuan/Desktop/skills 库/01-AI增强/主动型代理（proactive-agent）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/01-AI增强/主动型代理（proactive-agent）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/proactive-agent/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "active-agent",
+      "description": "用户说\"直接帮我做\"时，自主拆解任务、循环执行、处理障碍并汇报结果，无需反复确认",
+      "path": "/Users/xingxuan/Desktop/skills 库/01-AI增强/主动执行代理（active-agent）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/01-AI增强/主动执行代理（active-agent）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/active-agent/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "agent-eval-loop",
+      "description": "为 AI 代理输出设计评测标准、自检表和迭代闭环，适合测试写作、代码、分析、自动化代理是否稳定可用。",
+      "path": "/Users/xingxuan/Desktop/skills 库/01-AI增强/代理评测闭环（agent-eval-loop）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/01-AI增强/代理评测闭环（agent-eval-loop）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/agent-eval-loop/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "multi-agent-orchestrator",
+      "description": "把复杂任务拆给研究、执行、审查、写作等多个角色代理并整合结果，适合高复杂度交付和多线程推进。",
+      "path": "/Users/xingxuan/Desktop/skills 库/01-AI增强/多代理协作编排（multi-agent-orchestrator）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/01-AI增强/多代理协作编排（multi-agent-orchestrator）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/multi-agent-orchestrator/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "ai-master-manager",
+      "description": "总经理的显式入口。用户要做任何复杂任务、需要补齐认知、选择工具、检查方向、调用本机技能或安排独立审计时使用。它先读取并执行 ai-master 的总经理流程，再决定是否调用动画工厂、研究、剪辑、配音或其他员工；不得跳过方向审计、能力探针、最小验证和风险门。",
+      "path": "/Users/xingxuan/Desktop/skills 库/01-AI增强/总经理入口（ai-master-manager）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/01-AI增强/总经理入口（ai-master-manager）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/ai-master-manager/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "ai-master-toolkit",
+      "description": "总经理的能力桥接层。把目标语义转换成任务族、方向审计、技能依赖、工具探针、风险门和交付验收；优先调用能力图与已验证工具，不依赖用户记忆技能关键词。适用于“帮我调度工具”“判断该用什么 AI”“先排雷再做”“检查我有哪些技能”“缺工具就补齐”等请求。",
+      "path": "/Users/xingxuan/Desktop/skills 库/01-AI增强/总经理能力工具箱（ai-master-toolkit）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/01-AI增强/总经理能力工具箱（ai-master-toolkit）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/ai-master-toolkit/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "ai-master",
+      "description": "作为茂茂的 AI 总经理，负责目标纠偏、选择和调度 AI、生产、独立审计、返工、交付与复盘；也用于审查、验证并沉淀 AI 实践方法。当用户说“总经理”、要求学习帖子、完成复杂 AI 任务、调度其他 AI、审计方向或让系统成长时使用。",
+      "path": "/Users/xingxuan/Desktop/skills 库/01-AI增强/总经理（ai-master）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/01-AI增强/总经理（ai-master）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/ai-master/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "skill-finder",
+      "description": "根据任务目标筛选、比较和安装合适的 Agent Skill，适合面对大量技能仓库、插件市场和本地技能库时做选择。",
+      "path": "/Users/xingxuan/Desktop/skills 库/01-AI增强/技能发现与选型（skill-finder）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/01-AI增强/技能发现与选型（skill-finder）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/skill-finder/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "best-minds",
+      "description": "模拟器思维：不问\"你怎么看\"，而是问\"世界上谁最懂这个？TA 会怎么说？\"。触发词：最强大脑、顶级专家、世界级、best minds、谁最懂这个",
+      "path": "/Users/xingxuan/Desktop/skills 库/01-AI增强/最强大脑（best-minds）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/01-AI增强/最强大脑（best-minds）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/best-minds/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "self-improvement",
+      "description": "Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Claude ('No, that's wrong...', 'Actually...'), (3) User requests a capability that doesn't exist, (4) An external API or tool fails, (5) Claude realizes its knowledge is outdated or incorrect, (6) A better approach is discovered for a recurring task. Also review learnings before major tasks.",
+      "path": "/Users/xingxuan/Desktop/skills 库/01-AI增强/自我优化代理（self-improving-agent）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/01-AI增强/自我优化代理（self-improving-agent）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/self-improvement/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "ai-animation-factory",
+      "description": "茂茂 AI 动画工厂：把一句话、故事或参考片变成经过方向审计、角色/场景/分镜/动作/声音/剪辑与独立验收的动画短片；适用于不会专业流程、需要总经理自动补齐制作环节的任务。",
+      "path": "/Users/xingxuan/Desktop/skills 库/02-内容创作/AI动画工厂（ai-animation-factory）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/02-内容创作/AI动画工厂（ai-animation-factory）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/ai-animation-factory/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "content-repurposing",
+      "description": "把一篇长内容拆成公众号、小红书、短视频脚本、朋友圈和社群素材，适合一次创作多平台分发。",
+      "path": "/Users/xingxuan/Desktop/skills 库/02-内容创作/内容矩阵复用（content-repurposing）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/02-内容创作/内容矩阵复用（content-repurposing）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/content-repurposing/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "animation-factory",
+      "description": "“动画工厂”的显式调用入口。把一句话、故事或参考片交给茂茂动画工厂，自动补齐剧本、角色定妆与视图、场景、分镜、动作、声音、剪辑和独立验收；适用于不会专业流程但要做动画短片的用户。",
+      "path": "/Users/xingxuan/Desktop/skills 库/02-内容创作/动画工厂（animation-factory）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/02-内容创作/动画工厂（animation-factory）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/animation-factory/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "animation-dream-factory",
+      "description": "“动画梦工厂”的显式调用入口；这是茂茂动画工厂的同义别名，用于从故事或场景目标制作动画，不代表未经验证的一键量产能力。",
+      "path": "/Users/xingxuan/Desktop/skills 库/02-内容创作/动画梦工厂（animation-dream-factory）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/02-内容创作/动画梦工厂（animation-dream-factory）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/animation-dream-factory/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "original-writing",
+      "description": "从零创作3000-8000字原创长文，包含受众分析、差异化角度策划、张力弧线结构和强钩子写作",
+      "path": "/Users/xingxuan/Desktop/skills 库/02-内容创作/原创长文（original-writing）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/02-内容创作/原创长文（original-writing）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/original-writing/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "ai-polish",
+      "description": "检测并修复中文内容中的AI写作特征，逐类诊断后重写，让文章读起来像真人写的",
+      "path": "/Users/xingxuan/Desktop/skills 库/02-内容创作/去AI味润色（ai-polish）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/02-内容创作/去AI味润色（ai-polish）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/ai-polish/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "humanizer",
+      "description": "|",
+      "path": "/Users/xingxuan/Desktop/skills 库/02-内容创作/去AI味英文版（humanizer）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/02-内容创作/去AI味英文版（humanizer）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/humanizer/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "mimeng-topic-method",
+      "description": "用咪蒙选题法筛选和改造选题：三个硬指标（覆盖面、争议性、获得感）+ 情绪矩阵 + 二次加工，把普通干货题改成有传播势能的爆款题。适合公众号、小红书、短视频的选题会、改题和复盘。",
+      "path": "/Users/xingxuan/Desktop/skills 库/02-内容创作/咪蒙选题法（mimeng-topic-method）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/02-内容创作/咪蒙选题法（mimeng-topic-method）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/mimeng-topic-method/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "brand-voice-system",
+      "description": "沉淀个人 IP 或品牌的表达风格、禁用词、常用句式和改写规则，适合团队长期稳定产出内容。",
+      "path": "/Users/xingxuan/Desktop/skills 库/02-内容创作/品牌声纹系统（brand-voice-system）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/02-内容创作/品牌声纹系统（brand-voice-system）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/brand-voice-system/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "ad-copywriting",
+      "description": "撰写品牌合作商单文案，含完整brief解读、角度选择方法和小红书/微信/视频号平台专属结构模板",
+      "path": "/Users/xingxuan/Desktop/skills 库/02-内容创作/商单文案写作（ad-copywriting）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/02-内容创作/商单文案写作（ad-copywriting）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/ad-copywriting/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "content-rewrite",
+      "description": "将爆款参考内容改写为原创风格，保留有效结构和核心逻辑，替换全部表达、案例和比喻",
+      "path": "/Users/xingxuan/Desktop/skills 库/02-内容创作/改稿（content-rewrite）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/02-内容创作/改稿（content-rewrite）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/content-rewrite/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "maomao-animation-studio",
+      "description": "茂茂动画工厂：把一句场景描述、故事或表现要求制作成完整动画短片，统筹剧本台词、角色场景、分镜运镜、提示词、动画生成、配音口型、剪辑、音乐音效、字幕、独立审核与导出；也用于激烈打斗、武器战、追击、打击感与动作预演。用于“一句话做动画”“一键出片”“动画全流程”；仅咨询工具时不启动制作。",
+      "path": "/Users/xingxuan/Desktop/skills 库/02-内容创作/茂茂动画工厂（maomao-animation-studio）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/02-内容创作/茂茂动画工厂（maomao-animation-studio）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/maomao-animation-studio/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "last30days",
+      "description": "Research a topic from the last 30 days. Also triggered by 'last30'. Sources: Reddit, X, YouTube, web. Become an expert and write copy-paste-ready prompts.",
+      "path": "/Users/xingxuan/Desktop/skills 库/02-内容创作/最近30天（last30days）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/02-内容创作/最近30天（last30days）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/last30days/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "research-to-article",
+      "description": "把网页、论文、访谈、笔记和社媒讨论整理成可发布长文，适合公众号、知乎、课程讲义和深度报告。",
+      "path": "/Users/xingxuan/Desktop/skills 库/02-内容创作/调研成稿（research-to-article）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/02-内容创作/调研成稿（research-to-article）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/research-to-article/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "hook-angle-lab",
+      "description": "为文章、短视频、直播和课程设计高点击选题角度和开头钩子，适合选题会、内容改题和爆款复盘。",
+      "path": "/Users/xingxuan/Desktop/skills 库/02-内容创作/选题钩子实验室（hook-angle-lab）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/02-内容创作/选题钩子实验室（hook-angle-lab）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/hook-angle-lab/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "advanced-xhs-visual-design",
+      "description": "高级图文设计 + 高级画图提示词合并技能。用于把内容、选题、文章、发布会信息、产品分析、AI 工具评测、商业复盘等转成小红书/公众号高质感图文卡片，也用于为封面、海报、信息图、人像、UI 截图、叙事概念图生成高级生图 prompt。用户说“高级图文设计”“高级画图提示词”“超级提示词”“做一组小红书图文”“写 prompt”“按这个风格仿写”“黑绿终端风”“像 Codex/Claude Design 这种图文卡片”“把这篇内容做成高级卡片”时触发。",
+      "path": "/Users/xingxuan/Desktop/skills 库/02-内容创作/高级图文设计（advanced-xhs-visual-design）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/02-内容创作/高级图文设计（advanced-xhs-visual-design）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/advanced-xhs-visual-design/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "api-gateway",
+      "description": "Unified gateway for calling external APIs when user needs to fetch data from or send data to web services, SaaS platforms, or REST/GraphQL APIs including GitHub, Slack, Notion, and Chinese services.",
+      "path": "/Users/xingxuan/Desktop/skills 库/03-开发工具/API网关（api-gateway）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/03-开发工具/API网关（api-gateway）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/api-gateway/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "mcp-builder",
+      "description": "把外部系统封装成 Agent 可调用的 MCP 工具，适合连接数据库、业务系统、文件服务和第三方 API。",
+      "path": "/Users/xingxuan/Desktop/skills 库/03-开发工具/MCP构建器（mcp-builder）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/03-开发工具/MCP构建器（mcp-builder）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/mcp-builder/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "repo-context-compiler",
+      "description": "为大型代码库生成给 AI 读取的模块图、入口地图和上下文包，适合代理反复读仓库、找不到边界的场景。",
+      "path": "/Users/xingxuan/Desktop/skills 库/03-开发工具/仓库上下文编译器（repo-context-compiler）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/03-开发工具/仓库上下文编译器（repo-context-compiler）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/repo-context-compiler/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "code-review-ci",
+      "description": "审查 PR、定位 CI 失败并给出可执行修复方案，适合代码上线前检查、测试失败排查和团队协作。",
+      "path": "/Users/xingxuan/Desktop/skills 库/03-开发工具/代码评审与CI修复（code-review-ci）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/03-开发工具/代码评审与CI修复（code-review-ci）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/code-review-ci/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "skill-creator",
+      "description": "Creates new Claude Code SKILL.md files through a structured interview when user wants to package a workflow or capability as a reusable skill for AI agents.",
+      "path": "/Users/xingxuan/Desktop/skills 库/03-开发工具/技能创建器（skill-creator）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/03-开发工具/技能创建器（skill-creator）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/.system/skill-creator/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "skill-vetter",
+      "description": "Audits a SKILL.md and its scripts for security risks before installation. Triggers when user wants to install or trust a skill from an external or unknown source.",
+      "path": "/Users/xingxuan/Desktop/skills 库/03-开发工具/技能安全审查（skill-vetter）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/03-开发工具/技能安全审查（skill-vetter）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/skill-vetter/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "coding-agent",
+      "description": "Delegates a coding task to a specialized sub-agent when the user provides a programming task with clear language, input/output spec, and test requirements. Rejects incomplete specs before delegating.",
+      "path": "/Users/xingxuan/Desktop/skills 库/03-开发工具/编程代理（coding-agent）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/03-开发工具/编程代理（coding-agent）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/coding-agent/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "web-story",
+      "description": "把一个选题、想法或研究目标做成单页叙事网页（手机+电脑双端适配）。当用户说\"把这个选题做成网页\"、\"做个网页介绍\"、\"把研究结果做成网站\"、\"做个观察站/指南页/落地页\"、\"网页故事\"、或给出一个主题要生成可视化网页时触发。轻流程：接题 → 拆叙事 → 套模板做视觉 → 双端验收 → 平台内生优先部署。不适用于 PPT/slides、多页复杂站点、海报/平面设计。",
+      "path": "/Users/xingxuan/Desktop/skills 库/03-开发工具/网页故事（web-story）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/03-开发工具/网页故事（web-story）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/web-story/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "content-scraper",
+      "description": "Scrapes full content from social media platforms (XHS, Weibo, Zhihu, Bilibili, X/Twitter) including truncated text, metadata, and comments when user provides a content URL or search query.",
+      "path": "/Users/xingxuan/Desktop/skills 库/04-浏览器自动化/内容抓取（content-scraper）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/04-浏览器自动化/内容抓取（content-scraper）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/content-scraper/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "browser-automation",
+      "description": "Controls a real browser via MCP Playwright to automate web tasks including navigation, form filling, clicking, and data extraction when direct API access is unavailable.",
+      "path": "/Users/xingxuan/Desktop/skills 库/04-浏览器自动化/浏览器自动化（browser-automation）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/04-浏览器自动化/浏览器自动化（browser-automation）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/browser-automation/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "browser-research-agent",
+      "description": "用浏览器检索、对比、摘录网页并生成来源清单，适合产品调研、竞品分析、资料搜集和网页验证。",
+      "path": "/Users/xingxuan/Desktop/skills 库/04-浏览器自动化/浏览器调研代理（browser-research-agent）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/04-浏览器自动化/浏览器调研代理（browser-research-agent）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/browser-research-agent/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "lead-followup-automation",
+      "description": "自动整理销售线索、生成跟进话术和下一步动作，适合私域、课程咨询、企业服务和合作机会跟进。",
+      "path": "/Users/xingxuan/Desktop/skills 库/04-浏览器自动化/线索跟进自动化（lead-followup-automation）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/04-浏览器自动化/线索跟进自动化（lead-followup-automation）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/lead-followup-automation/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "video-transcribe",
+      "description": "Downloads video audio using yt-dlp and transcribes to text with Whisper when user provides a video URL or local video file path and wants a text transcript.",
+      "path": "/Users/xingxuan/Desktop/skills 库/04-浏览器自动化/视频转写（video-transcribe）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/04-浏览器自动化/视频转写（video-transcribe）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/video-transcribe/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "wechat-mp-auto",
+      "description": "【公众号自动化】 当用户需要写公众号文章、发布微信公众号内容、或执行公众号全流程（写作→排版→发布）时触发。也适用于：用户说\\\"写一篇公众号\\\"、\\\"帮我发公众号\\\"、\\\"微信文章\\\"、\\\"自媒体内容\\\"、\\\"公众号排版\\\"、\\\"发布到公众号\\\"。触发词：/公众号、/wechat-post。不适用于：纯视频脚本（用原创长文）、小红书/头条等其他平台。",
+      "path": "/Users/xingxuan/Desktop/skills 库/05-社交媒体/公众号自动化（wechat-mp-auto）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/05-社交媒体/公众号自动化（wechat-mp-auto）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/wechat-mp-auto/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "video-account-analysis",
+      "description": "分析微信视频号后台数据截图，提取关键指标、对标行业基准并给出可执行优化建议。",
+      "path": "/Users/xingxuan/Desktop/skills 库/05-社交媒体/微信视频号分析（video-account-analysis）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/05-社交媒体/微信视频号分析（video-account-analysis）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/video-account-analysis/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "short-video-script-lab",
+      "description": "把选题转成可拍摄短视频脚本、分镜和口播稿，适合知识类、观点类、课程引流类短视频。",
+      "path": "/Users/xingxuan/Desktop/skills 库/05-社交媒体/短视频脚本工坊（short-video-script-lab）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/05-社交媒体/短视频脚本工坊（short-video-script-lab）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/short-video-script-lab/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "social-media-strategy",
+      "description": "分析账号定位、内容结构、平台差异和增长动作，适合公众号、小红书、视频号、抖音和 LinkedIn 运营复盘。",
+      "path": "/Users/xingxuan/Desktop/skills 库/05-社交媒体/社媒策略分析（social-media-strategy）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/05-社交媒体/社媒策略分析（social-media-strategy）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/social-media-strategy/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "xiaohongshu-auto",
+      "description": "通过浏览器自动化将内容发布到小红书，包含内容验证、话题生成和发布确认。",
+      "path": "/Users/xingxuan/Desktop/skills 库/05-社交媒体/自动发小红书（xiaohongshu-auto）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/05-社交媒体/自动发小红书（xiaohongshu-auto）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/xiaohongshu-auto/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "meeting-notes-actions",
+      "description": "从会议、访谈、语音转写中提取结论、争议、行动项和负责人，适合团队会议和客户访谈整理。",
+      "path": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/会议纪要行动项（meeting-notes-actions）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/会议纪要行动项（meeting-notes-actions）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/meeting-notes-actions/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "learning-loop",
+      "description": "把学习材料转成练习、复盘、错题和下次行动，适合读书、课程学习、技能训练和考试准备。",
+      "path": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/学习闭环（learning-loop）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/学习闭环（learning-loop）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/learning-loop/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "maomao-thinking",
+      "description": "【maomao-thinking】 茂茂商业思考（maomao thinking）— 面向内容型个人IP、小团队知识付费、直播成交、平台经营、产品迭代与AI无人公司的统一商业判断",
+      "path": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/茂茂商业思考（maomao-thinking）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/茂茂商业思考（maomao-thinking）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/maomao-thinking/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "insight",
+      "description": "【洞察】 战略洞察 - 用户的“战略合伙人”对话系统。触发场景：",
+      "path": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/洞察（insight）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/洞察（insight）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/insight/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "知识卡片",
+      "description": "万能知识卡片生成器——把任意主题（行业名词、人物生平、产品概念、知识科普……）批量产出\"滑动一次出一条\"的可复制卡片。一次滑动 = 一条内容，每条含定义/大白话类比/为什么重要/常见误读/关联词等模块，输出结构化 JSON 与可滑动 HTML 卡片。渲染引擎完全领域无关——JSON 顶层用 categories / risks 覆盖即可切换主题，封面与话术随主题自适应。当用户说\"做XX的卡片\"\"XX释义卡片\"\"XX生平卡片\"\"名词释义\"\"术语卡\"\"行业黑话\"\"滑一下看一个词\"，或需要把任何主题整理成可分享卡片流时使用。",
+      "path": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/知识卡片（knowledge-cards）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/知识卡片（knowledge-cards）",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "knowledge-palace",
+      "description": "【知识宫殿】 知识宫殿 - 战略认知更新系统。触发场景：",
+      "path": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/知识宫殿（knowledge-palace）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/知识宫殿（knowledge-palace）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/knowledge-palace/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "notes-research",
+      "description": "查询历史笔记支持研究与写作，多角度检索、相关性评估、综合摘要并标注来源。",
+      "path": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/笔记研究助手（notes-research）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/笔记研究助手（notes-research）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/notes-research/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "memory-boost",
+      "description": "扩展 Claude Code 跨会话记忆：语义搜索历史、生成结构化报告、写入持久化上下文。",
+      "path": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/记忆增强（memory-boost）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/记忆增强（memory-boost）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/memory-boost/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "course-design-agent",
+      "description": "把一个能力目标设计成课程大纲、作业、案例和交付标准，适合训练营、知识付费课和企业内训。",
+      "path": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/课程设计代理（course-design-agent）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/06-知识与学习/课程设计代理（course-design-agent）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/course-design-agent/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "obsidian",
+      "description": "Work with Obsidian vaults (plain Markdown notes) and automate via obsidian-cli.",
+      "path": "/Users/xingxuan/Desktop/skills 库/07-效率工具/Obsidian笔记（obsidian）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/07-效率工具/Obsidian笔记（obsidian）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/obsidian/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "sonoscli",
+      "description": "CLI-driven office workflow management that routes tasks, calendar, meeting notes, and status tracking to the right tools with natural language input",
+      "path": "/Users/xingxuan/Desktop/skills 库/07-效率工具/办公协同（sonoscli）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/07-效率工具/办公协同（sonoscli）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/sonoscli/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "editable-pptx-builder",
+      "description": "生成可编辑 PPTX 文件结构、页面文案、图表和设计说明，适合课程发布、商业汇报、路演和研究报告。",
+      "path": "/Users/xingxuan/Desktop/skills 库/07-效率工具/可编辑PPT生成（editable-pptx-builder）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/07-效率工具/可编辑PPT生成（editable-pptx-builder）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/editable-pptx-builder/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "workflow-automation-builder",
+      "description": "把重复办公流程拆成触发器、步骤、工具、异常处理和验收标准，适合运营、销售、内容和管理自动化。",
+      "path": "/Users/xingxuan/Desktop/skills 库/07-效率工具/工作流自动化搭建（workflow-automation-builder）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/07-效率工具/工作流自动化搭建（workflow-automation-builder）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/workflow-automation-builder/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "docx-report-builder",
+      "description": "生成可交付的 DOCX 报告结构、正文、表格和审阅清单，适合咨询报告、调研报告、课程讲义和项目复盘。",
+      "path": "/Users/xingxuan/Desktop/skills 库/07-效率工具/报告文档生成（docx-report-builder）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/07-效率工具/报告文档生成（docx-report-builder）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/docx-report-builder/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "maomao-ppt",
+      "description": "将主题、文章、课程或汇报材料转成高审美中文 PPT 方案；支持有图增强版和无图稳态版，适合课程、发布、研究报告、商业汇报和个人演讲。",
+      "path": "/Users/xingxuan/Desktop/skills 库/07-效率工具/茂茂PPT（maomao-ppt）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/07-效率工具/茂茂PPT（maomao-ppt）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/maomao-ppt/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "market-research-analyst",
+      "description": "对行业、竞品、用户、价格和渠道进行结构化市场调研，适合新项目判断、课程选题和产品定位。",
+      "path": "/Users/xingxuan/Desktop/skills 库/08-数据分析/市场调研分析（market-research-analyst）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/08-数据分析/市场调研分析（market-research-analyst）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/market-research-analyst/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "business-dashboard-analyst",
+      "description": "分析营收、线索、转化、交付、退款和现金流仪表盘，适合知识付费、小团队和内容业务经营复盘。",
+      "path": "/Users/xingxuan/Desktop/skills 库/08-数据分析/经营仪表盘分析（business-dashboard-analyst）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/08-数据分析/经营仪表盘分析（business-dashboard-analyst）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/business-dashboard-analyst/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "spreadsheet-analyst",
+      "description": "清洗 Excel/CSV 表格，生成透视、指标、异常点和经营解释，适合销售、投放、财务和运营数据。",
+      "path": "/Users/xingxuan/Desktop/skills 库/08-数据分析/表格分析助手（spreadsheet-analyst）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/08-数据分析/表格分析助手（spreadsheet-analyst）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/spreadsheet-analyst/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "finance-assistant",
+      "description": "Financial analysis for knowledge payment and online education businesses covering revenue, costs, CAC, LTV, channel ROI, and P&L with benchmarks",
+      "path": "/Users/xingxuan/Desktop/skills 库/08-数据分析/财务分析助手（finance-assistant）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/08-数据分析/财务分析助手（finance-assistant）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/finance-assistant/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "asset-allocation-risk-review",
+      "description": "从现金流、期限、集中度、流动性和风险承受能力角度复盘家庭或企业资产配置，不提供具体交易建议。",
+      "path": "/Users/xingxuan/Desktop/skills 库/08-数据分析/资产配置风险复盘（asset-allocation-risk-review）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/08-数据分析/资产配置风险复盘（asset-allocation-risk-review）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/asset-allocation-risk-review/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "financial-risk-literacy",
+      "description": "识别常见金融产品、贷款、保险、投资宣传和现金流决策中的风险点，输出面向普通人的风险说明与核查清单。",
+      "path": "/Users/xingxuan/Desktop/skills 库/08-数据分析/金融风险识别（financial-risk-literacy）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/08-数据分析/金融风险识别（financial-risk-literacy）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/financial-risk-literacy/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "personal-investment-workflow",
+      "description": "面向学习交流的个人投资研究与复盘工作流，用于整理公开信息、持仓假设、风险清单和周报，不输出买卖建议。",
+      "path": "/Users/xingxuan/Desktop/skills 库/09-金融/个人投资工作流（personal-investment-workflow）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/09-金融/个人投资工作流（personal-investment-workflow）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/personal-investment-workflow/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "enterprise-strategy-analysis",
+      "description": "面向企业金融和经营诊断的策略分析工作流，用于整理行业、公司、财务、竞争和银行服务切入点。",
+      "path": "/Users/xingxuan/Desktop/skills 库/09-金融/企业策略分析（enterprise-strategy-analysis）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/09-金融/企业策略分析（enterprise-strategy-analysis）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/enterprise-strategy-analysis/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "investment-risk-review",
+      "description": "面向学习交流的投资风险辨析工作流，用于审查荐股内容、投研工具、产品宣传和 AI 投资输出的风险边界。",
+      "path": "/Users/xingxuan/Desktop/skills 库/09-金融/投资风险辨析（investment-risk-review）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/09-金融/投资风险辨析（investment-risk-review）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/investment-risk-review/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "market-monitoring",
+      "description": "面向学习和演示的只读看盘盯盘工作流，用于整理行情、新闻、公告、财报和风险事件，不触发真实交易。",
+      "path": "/Users/xingxuan/Desktop/skills 库/09-金融/看盘盯盘（market-monitoring）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/09-金融/看盘盯盘（market-monitoring）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/market-monitoring/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "financial-modeling",
+      "description": "面向学习、投研和企业分析演示的财务建模工作流，用于搭建三表、DCF、情景分析和模型审查清单。",
+      "path": "/Users/xingxuan/Desktop/skills 库/09-金融/财务建模（financial-modeling）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/09-金融/财务建模（financial-modeling）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/financial-modeling/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "wealth-advisor",
+      "description": "面向学习和客户沟通演示的财富顾问工作流，用于整理资产负债、现金流、目标和风险偏好，生成结构化沟通报告。",
+      "path": "/Users/xingxuan/Desktop/skills 库/09-金融/财富顾问（wealth-advisor）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/09-金融/财富顾问（wealth-advisor）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/wealth-advisor/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "quant-trading-literacy",
+      "description": "面向学习交流的量化交易认知工作流，用于解释策略、回测、过拟合、滑点、交易成本和风控边界。",
+      "path": "/Users/xingxuan/Desktop/skills 库/09-金融/量化交易认知（quant-trading-literacy）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/09-金融/量化交易认知（quant-trading-literacy）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/quant-trading-literacy/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "context-engineering-agent",
+      "description": "为复杂任务整理长期上下文、规则、约束和交付标准，适合项目启动、交接、代理反复跑偏、需要把零散资料变成可复用上下文包的场景。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/01-AI增强/上下文工程代理（context-engineering-agent）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/01-AI增强/上下文工程代理（context-engineering-agent）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/context-engineering-agent/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "proactive-agent",
+      "description": "Transform AI agents from task-followers into proactive partners that anticipate needs and continuously improve. Now with WAL Protocol, Working Buffer, Autonomous Crons, and battle-tested patterns. Part of the Hal Stack 🦞",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/01-AI增强/主动型代理（proactive-agent）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/01-AI增强/主动型代理（proactive-agent）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/proactive-agent/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "active-agent",
+      "description": "用户说\"直接帮我做\"时，自主拆解任务、循环执行、处理障碍并汇报结果，无需反复确认",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/01-AI增强/主动执行代理（active-agent）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/01-AI增强/主动执行代理（active-agent）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/active-agent/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "agent-eval-loop",
+      "description": "为 AI 代理输出设计评测标准、自检表和迭代闭环，适合测试写作、代码、分析、自动化代理是否稳定可用。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/01-AI增强/代理评测闭环（agent-eval-loop）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/01-AI增强/代理评测闭环（agent-eval-loop）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/agent-eval-loop/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "multi-agent-orchestrator",
+      "description": "把复杂任务拆给研究、执行、审查、写作等多个角色代理并整合结果，适合高复杂度交付和多线程推进。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/01-AI增强/多代理协作编排（multi-agent-orchestrator）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/01-AI增强/多代理协作编排（multi-agent-orchestrator）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/multi-agent-orchestrator/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "skill-finder",
+      "description": "根据任务目标筛选、比较和安装合适的 Agent Skill，适合面对大量技能仓库、插件市场和本地技能库时做选择。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/01-AI增强/技能发现与选型（skill-finder）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/01-AI增强/技能发现与选型（skill-finder）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/skill-finder/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "best-minds",
+      "description": "模拟器思维：不问\"你怎么看\"，而是问\"世界上谁最懂这个？TA 会怎么说？\"。触发词：最强大脑、顶级专家、世界级、best minds、谁最懂这个",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/01-AI增强/最强大脑（best-minds）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/01-AI增强/最强大脑（best-minds）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/best-minds/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "self-improvement",
+      "description": "Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Claude ('No, that's wrong...', 'Actually...'), (3) User requests a capability that doesn't exist, (4) An external API or tool fails, (5) Claude realizes its knowledge is outdated or incorrect, (6) A better approach is discovered for a recurring task. Also review learnings before major tasks.",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/01-AI增强/自我优化代理（self-improving-agent）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/01-AI增强/自我优化代理（self-improving-agent）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/self-improvement/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "content-repurposing",
+      "description": "把一篇长内容拆成公众号、小红书、短视频脚本、朋友圈和社群素材，适合一次创作多平台分发。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/内容矩阵复用（content-repurposing）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/内容矩阵复用（content-repurposing）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/content-repurposing/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "original-writing",
+      "description": "从零创作3000-8000字原创长文，包含受众分析、差异化角度策划、张力弧线结构和强钩子写作",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/原创长文（original-writing）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/原创长文（original-writing）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/original-writing/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "ai-polish",
+      "description": "检测并修复中文内容中的AI写作特征，逐类诊断后重写，让文章读起来像真人写的",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/去AI味润色（ai-polish）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/去AI味润色（ai-polish）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/ai-polish/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "humanizer",
+      "description": "|",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/去AI味英文版（humanizer）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/去AI味英文版（humanizer）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/humanizer/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "mimeng-topic-method",
+      "description": "用咪蒙选题法筛选和改造选题：三个硬指标（覆盖面、争议性、获得感）+ 情绪矩阵 + 二次加工，把普通干货题改成有传播势能的爆款题。适合公众号、小红书、短视频的选题会、改题和复盘。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/咪蒙选题法（mimeng-topic-method）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/咪蒙选题法（mimeng-topic-method）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/mimeng-topic-method/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "brand-voice-system",
+      "description": "沉淀个人 IP 或品牌的表达风格、禁用词、常用句式和改写规则，适合团队长期稳定产出内容。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/品牌声纹系统（brand-voice-system）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/品牌声纹系统（brand-voice-system）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/brand-voice-system/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "ad-copywriting",
+      "description": "撰写品牌合作商单文案，含完整brief解读、角度选择方法和小红书/微信/视频号平台专属结构模板",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/商单文案写作（ad-copywriting）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/商单文案写作（ad-copywriting）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/ad-copywriting/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "content-rewrite",
+      "description": "将爆款参考内容改写为原创风格，保留有效结构和核心逻辑，替换全部表达、案例和比喻",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/改稿（content-rewrite）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/改稿（content-rewrite）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/content-rewrite/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "last30days",
+      "description": "Research a topic from the last 30 days. Also triggered by 'last30'. Sources: Reddit, X, YouTube, web. Become an expert and write copy-paste-ready prompts.",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/最近30天（last30days）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/最近30天（last30days）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/last30days/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "research-to-article",
+      "description": "把网页、论文、访谈、笔记和社媒讨论整理成可发布长文，适合公众号、知乎、课程讲义和深度报告。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/调研成稿（research-to-article）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/调研成稿（research-to-article）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/research-to-article/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "hook-angle-lab",
+      "description": "为文章、短视频、直播和课程设计高点击选题角度和开头钩子，适合选题会、内容改题和爆款复盘。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/选题钩子实验室（hook-angle-lab）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/选题钩子实验室（hook-angle-lab）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/hook-angle-lab/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "advanced-xhs-visual-design",
+      "description": "高级图文设计 + 高级画图提示词合并技能。用于把内容、选题、文章、发布会信息、产品分析、AI 工具评测、商业复盘等转成小红书/公众号高质感图文卡片，也用于为封面、海报、信息图、人像、UI 截图、叙事概念图生成高级生图 prompt。用户说“高级图文设计”“高级画图提示词”“超级提示词”“做一组小红书图文”“写 prompt”“按这个风格仿写”“黑绿终端风”“像 Codex/Claude Design 这种图文卡片”“把这篇内容做成高级卡片”时触发。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/高级图文设计（advanced-xhs-visual-design）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/02-内容创作/高级图文设计（advanced-xhs-visual-design）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/advanced-xhs-visual-design/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "api-gateway",
+      "description": "Unified gateway for calling external APIs when user needs to fetch data from or send data to web services, SaaS platforms, or REST/GraphQL APIs including GitHub, Slack, Notion, and Chinese services.",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/03-开发工具/API网关（api-gateway）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/03-开发工具/API网关（api-gateway）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/api-gateway/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "mcp-builder",
+      "description": "把外部系统封装成 Agent 可调用的 MCP 工具，适合连接数据库、业务系统、文件服务和第三方 API。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/03-开发工具/MCP构建器（mcp-builder）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/03-开发工具/MCP构建器（mcp-builder）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/mcp-builder/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "repo-context-compiler",
+      "description": "为大型代码库生成给 AI 读取的模块图、入口地图和上下文包，适合代理反复读仓库、找不到边界的场景。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/03-开发工具/仓库上下文编译器（repo-context-compiler）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/03-开发工具/仓库上下文编译器（repo-context-compiler）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/repo-context-compiler/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "code-review-ci",
+      "description": "审查 PR、定位 CI 失败并给出可执行修复方案，适合代码上线前检查、测试失败排查和团队协作。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/03-开发工具/代码评审与CI修复（code-review-ci）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/03-开发工具/代码评审与CI修复（code-review-ci）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/code-review-ci/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "skill-creator",
+      "description": "Creates new Claude Code SKILL.md files through a structured interview when user wants to package a workflow or capability as a reusable skill for AI agents.",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/03-开发工具/技能创建器（skill-creator）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/03-开发工具/技能创建器（skill-creator）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/.system/skill-creator/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "skill-vetter",
+      "description": "Audits a SKILL.md and its scripts for security risks before installation. Triggers when user wants to install or trust a skill from an external or unknown source.",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/03-开发工具/技能安全审查（skill-vetter）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/03-开发工具/技能安全审查（skill-vetter）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/skill-vetter/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "coding-agent",
+      "description": "Delegates a coding task to a specialized sub-agent when the user provides a programming task with clear language, input/output spec, and test requirements. Rejects incomplete specs before delegating.",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/03-开发工具/编程代理（coding-agent）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/03-开发工具/编程代理（coding-agent）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/coding-agent/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "web-story",
+      "description": "把一个选题、想法或研究目标做成单页叙事网页（手机+电脑双端适配）。当用户说\"把这个选题做成网页\"、\"做个网页介绍\"、\"把研究结果做成网站\"、\"做个观察站/指南页/落地页\"、\"网页故事\"、或给出一个主题要生成可视化网页时触发。轻流程：接题 → 拆叙事 → 套模板做视觉 → 双端验收 → 平台内生优先部署。不适用于 PPT/slides、多页复杂站点、海报/平面设计。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/03-开发工具/网页故事（web-story）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/03-开发工具/网页故事（web-story）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/web-story/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "content-scraper",
+      "description": "Scrapes full content from social media platforms (XHS, Weibo, Zhihu, Bilibili, X/Twitter) including truncated text, metadata, and comments when user provides a content URL or search query.",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/04-浏览器自动化/内容抓取（content-scraper）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/04-浏览器自动化/内容抓取（content-scraper）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/content-scraper/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "browser-automation",
+      "description": "Controls a real browser via MCP Playwright to automate web tasks including navigation, form filling, clicking, and data extraction when direct API access is unavailable.",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/04-浏览器自动化/浏览器自动化（browser-automation）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/04-浏览器自动化/浏览器自动化（browser-automation）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/browser-automation/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "browser-research-agent",
+      "description": "用浏览器检索、对比、摘录网页并生成来源清单，适合产品调研、竞品分析、资料搜集和网页验证。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/04-浏览器自动化/浏览器调研代理（browser-research-agent）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/04-浏览器自动化/浏览器调研代理（browser-research-agent）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/browser-research-agent/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "lead-followup-automation",
+      "description": "自动整理销售线索、生成跟进话术和下一步动作，适合私域、课程咨询、企业服务和合作机会跟进。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/04-浏览器自动化/线索跟进自动化（lead-followup-automation）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/04-浏览器自动化/线索跟进自动化（lead-followup-automation）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/lead-followup-automation/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "video-transcribe",
+      "description": "Downloads video audio using yt-dlp and transcribes to text with Whisper when user provides a video URL or local video file path and wants a text transcript.",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/04-浏览器自动化/视频转写（video-transcribe）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/04-浏览器自动化/视频转写（video-transcribe）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/video-transcribe/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "wechat-mp-auto",
+      "description": "【公众号自动化】 当用户需要写公众号文章、发布微信公众号内容、或执行公众号全流程（写作→排版→发布）时触发。也适用于：用户说\\\"写一篇公众号\\\"、\\\"帮我发公众号\\\"、\\\"微信文章\\\"、\\\"自媒体内容\\\"、\\\"公众号排版\\\"、\\\"发布到公众号\\\"。触发词：/公众号、/wechat-post。不适用于：纯视频脚本（用原创长文）、小红书/头条等其他平台。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/05-社交媒体/公众号自动化（wechat-mp-auto）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/05-社交媒体/公众号自动化（wechat-mp-auto）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/wechat-mp-auto/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "video-account-analysis",
+      "description": "分析微信视频号后台数据截图，提取关键指标、对标行业基准并给出可执行优化建议。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/05-社交媒体/微信视频号分析（video-account-analysis）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/05-社交媒体/微信视频号分析（video-account-analysis）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/video-account-analysis/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "short-video-script-lab",
+      "description": "把选题转成可拍摄短视频脚本、分镜和口播稿，适合知识类、观点类、课程引流类短视频。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/05-社交媒体/短视频脚本工坊（short-video-script-lab）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/05-社交媒体/短视频脚本工坊（short-video-script-lab）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/short-video-script-lab/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "social-media-strategy",
+      "description": "分析账号定位、内容结构、平台差异和增长动作，适合公众号、小红书、视频号、抖音和 LinkedIn 运营复盘。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/05-社交媒体/社媒策略分析（social-media-strategy）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/05-社交媒体/社媒策略分析（social-media-strategy）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/social-media-strategy/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "xiaohongshu-auto",
+      "description": "通过浏览器自动化将内容发布到小红书，包含内容验证、话题生成和发布确认。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/05-社交媒体/自动发小红书（xiaohongshu-auto）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/05-社交媒体/自动发小红书（xiaohongshu-auto）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/xiaohongshu-auto/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "meeting-notes-actions",
+      "description": "从会议、访谈、语音转写中提取结论、争议、行动项和负责人，适合团队会议和客户访谈整理。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/会议纪要行动项（meeting-notes-actions）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/会议纪要行动项（meeting-notes-actions）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/meeting-notes-actions/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "learning-loop",
+      "description": "把学习材料转成练习、复盘、错题和下次行动，适合读书、课程学习、技能训练和考试准备。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/学习闭环（learning-loop）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/学习闭环（learning-loop）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/learning-loop/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "maomao-thinking",
+      "description": "【maomao-thinking】 茂茂商业思考（maomao thinking）— 面向内容型个人IP、小团队知识付费、直播成交、平台经营、产品迭代与AI无人公司的统一商业判断 skill。用于：诊断生意卡点、分析内容与直播转化、判断平台风险与合规、评估产品/报价/训练营设计、做战略取舍，以及把内容型个人IP的经营逻辑沉淀成可复用的判断系统。当用户提到“茂茂商业思考 / maomao thinking / 商业思考 skill / 商业思考模型 / 按这套方式判断 / 帮我诊断这个生意 / 帮我看内容为什么不转化 / 该冲还是该收 / 要不要做这个项目 / 直播为什么卖不动 / 这个动作有无平台风险 / 怎么把这个想法沉淀成茂茂方法论”时使用。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/茂茂商业思考（maomao-thinking）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/茂茂商业思考（maomao-thinking）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/maomao-thinking/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "insight",
+      "description": "【洞察】 战略洞察 - 用户的“战略合伙人”对话系统。触发场景：",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/洞察（insight）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/洞察（insight）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/insight/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "知识卡片",
+      "description": "万能知识卡片生成器——把任意主题（行业名词、人物生平、产品概念、知识科普……）批量产出\"滑动一次出一条\"的可复制卡片。一次滑动 = 一条内容，每条含定义/大白话类比/为什么重要/常见误读/关联词等模块，输出结构化 JSON 与可滑动 HTML 卡片。渲染引擎完全领域无关——JSON 顶层用 categories / risks 覆盖即可切换主题，封面与话术随主题自适应。当用户说\"做XX的卡片\"\"XX释义卡片\"\"XX生平卡片\"\"名词释义\"\"术语卡\"\"行业黑话\"\"滑一下看一个词\"，或需要把任何主题整理成可分享卡片流时使用。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/知识卡片（knowledge-cards）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/知识卡片（knowledge-cards）",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "knowledge-palace",
+      "description": "【知识宫殿】 知识宫殿 - 战略认知更新系统。触发场景：",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/知识宫殿（knowledge-palace）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/知识宫殿（knowledge-palace）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/knowledge-palace/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "notes-research",
+      "description": "查询历史笔记支持研究与写作，多角度检索、相关性评估、综合摘要并标注来源。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/笔记研究助手（notes-research）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/笔记研究助手（notes-research）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/notes-research/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "memory-boost",
+      "description": "扩展 Claude Code 跨会话记忆：语义搜索历史、生成结构化报告、写入持久化上下文。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/记忆增强（memory-boost）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/记忆增强（memory-boost）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/memory-boost/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "course-design-agent",
+      "description": "把一个能力目标设计成课程大纲、作业、案例和交付标准，适合训练营、知识付费课和企业内训。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/课程设计代理（course-design-agent）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/06-知识与学习/课程设计代理（course-design-agent）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/course-design-agent/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "obsidian",
+      "description": "Work with Obsidian vaults (plain Markdown notes) and automate via obsidian-cli.",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/07-效率工具/Obsidian笔记（obsidian）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/07-效率工具/Obsidian笔记（obsidian）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/obsidian/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "sonoscli",
+      "description": "CLI-driven office workflow management that routes tasks, calendar, meeting notes, and status tracking to the right tools with natural language input",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/07-效率工具/办公协同（sonoscli）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/07-效率工具/办公协同（sonoscli）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/sonoscli/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "editable-pptx-builder",
+      "description": "生成可编辑 PPTX 文件结构、页面文案、图表和设计说明，适合课程发布、商业汇报、路演和研究报告。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/07-效率工具/可编辑PPT生成（editable-pptx-builder）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/07-效率工具/可编辑PPT生成（editable-pptx-builder）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/editable-pptx-builder/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "workflow-automation-builder",
+      "description": "把重复办公流程拆成触发器、步骤、工具、异常处理和验收标准，适合运营、销售、内容和管理自动化。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/07-效率工具/工作流自动化搭建（workflow-automation-builder）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/07-效率工具/工作流自动化搭建（workflow-automation-builder）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/workflow-automation-builder/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "docx-report-builder",
+      "description": "生成可交付的 DOCX 报告结构、正文、表格和审阅清单，适合咨询报告、调研报告、课程讲义和项目复盘。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/07-效率工具/报告文档生成（docx-report-builder）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/07-效率工具/报告文档生成（docx-report-builder）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/docx-report-builder/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "maomao-ppt",
+      "description": "将主题、文章、课程或汇报材料转成高审美中文 PPT 方案；支持有图增强版和无图稳态版，适合课程、发布、研究报告、商业汇报和个人演讲。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/07-效率工具/茂茂PPT（maomao-ppt）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/07-效率工具/茂茂PPT（maomao-ppt）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/maomao-ppt/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "market-research-analyst",
+      "description": "对行业、竞品、用户、价格和渠道进行结构化市场调研，适合新项目判断、课程选题和产品定位。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/08-数据分析/市场调研分析（market-research-analyst）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/08-数据分析/市场调研分析（market-research-analyst）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/market-research-analyst/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "business-dashboard-analyst",
+      "description": "分析营收、线索、转化、交付、退款和现金流仪表盘，适合知识付费、小团队和内容业务经营复盘。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/08-数据分析/经营仪表盘分析（business-dashboard-analyst）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/08-数据分析/经营仪表盘分析（business-dashboard-analyst）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/business-dashboard-analyst/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "spreadsheet-analyst",
+      "description": "清洗 Excel/CSV 表格，生成透视、指标、异常点和经营解释，适合销售、投放、财务和运营数据。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/08-数据分析/表格分析助手（spreadsheet-analyst）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/08-数据分析/表格分析助手（spreadsheet-analyst）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/spreadsheet-analyst/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "finance-assistant",
+      "description": "Financial analysis for knowledge payment and online education businesses covering revenue, costs, CAC, LTV, channel ROI, and P&L with benchmarks",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/08-数据分析/财务分析助手（finance-assistant）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/08-数据分析/财务分析助手（finance-assistant）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/finance-assistant/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "asset-allocation-risk-review",
+      "description": "从现金流、期限、集中度、流动性和风险承受能力角度复盘家庭或企业资产配置，不提供具体交易建议。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/08-数据分析/资产配置风险复盘（asset-allocation-risk-review）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/08-数据分析/资产配置风险复盘（asset-allocation-risk-review）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/asset-allocation-risk-review/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "financial-risk-literacy",
+      "description": "识别常见金融产品、贷款、保险、投资宣传和现金流决策中的风险点，输出面向普通人的风险说明与核查清单。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/08-数据分析/金融风险识别（financial-risk-literacy）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/08-数据分析/金融风险识别（financial-risk-literacy）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/financial-risk-literacy/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "personal-investment-workflow",
+      "description": "面向学习交流的个人投资研究与复盘工作流，用于整理公开信息、持仓假设、风险清单和周报，不输出买卖建议。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/09-金融/个人投资工作流（personal-investment-workflow）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/09-金融/个人投资工作流（personal-investment-workflow）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/personal-investment-workflow/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "enterprise-strategy-analysis",
+      "description": "面向企业金融和经营诊断的策略分析工作流，用于整理行业、公司、财务、竞争和银行服务切入点。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/09-金融/企业策略分析（enterprise-strategy-analysis）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/09-金融/企业策略分析（enterprise-strategy-analysis）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/enterprise-strategy-analysis/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "investment-risk-review",
+      "description": "面向学习交流的投资风险辨析工作流，用于审查荐股内容、投研工具、产品宣传和 AI 投资输出的风险边界。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/09-金融/投资风险辨析（investment-risk-review）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/09-金融/投资风险辨析（investment-risk-review）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/investment-risk-review/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "market-monitoring",
+      "description": "面向学习和演示的只读看盘盯盘工作流，用于整理行情、新闻、公告、财报和风险事件，不触发真实交易。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/09-金融/看盘盯盘（market-monitoring）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/09-金融/看盘盯盘（market-monitoring）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/market-monitoring/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "financial-modeling",
+      "description": "面向学习、投研和企业分析演示的财务建模工作流，用于搭建三表、DCF、情景分析和模型审查清单。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/09-金融/财务建模（financial-modeling）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/09-金融/财务建模（financial-modeling）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/financial-modeling/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "wealth-advisor",
+      "description": "面向学习和客户沟通演示的财富顾问工作流，用于整理资产负债、现金流、目标和风险偏好，生成结构化沟通报告。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/09-金融/财富顾问（wealth-advisor）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/09-金融/财富顾问（wealth-advisor）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/wealth-advisor/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "quant-trading-literacy",
+      "description": "面向学习交流的量化交易认知工作流，用于解释策略、回测、过拟合、滑点、交易成本和风控边界。",
+      "path": "/Users/xingxuan/Desktop/skills 库/网站制作/09-金融/量化交易认知（quant-trading-literacy）/SKILL.md",
+      "source": "desktop-library",
+      "folder": "/Users/xingxuan/Desktop/skills 库/网站制作/09-金融/量化交易认知（quant-trading-literacy）",
+      "runtime_path": "/Users/xingxuan/.codex/skills/quant-trading-literacy/SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "asset-import",
+      "description": "Hosted ChatCut plugin sessions only (the `chatcut` MCP server). If the conversation is driving ChatCut Desktop (a `chatcut_desktop*` MCP server), load this skill only when the user explicitly chooses the plugin/web surface — desktop sessions otherwise ship their own instructions and tools. Import local, attached, or downloaded media into a ChatCut project through the hosted external connector.",
+      "path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/asset-import/SKILL.md",
+      "source": "plugin-runtime",
+      "folder": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/asset-import",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "chatcut-plugin-basics",
+      "description": "Hosted ChatCut plugin sessions only (the `chatcut` MCP server). If the conversation is driving ChatCut Desktop (a `chatcut_desktop*` MCP server), load this skill only when the user explicitly chooses the plugin/web surface — desktop sessions otherwise ship their own instructions and tools. Use for video editing or video creation work that should be editable in ChatCut, even when the user does not explicitly mention ChatCut. Covers local/attached video editing, captions/subtitles, transcription, trimming, talking-head cleanup, highlights, B-roll, overlays, generation, export, project/editor opening, importing, targeting, verifying, watching, and identifying the active ChatCut project/editor URL. Also use when ChatCut tools appear missing, unavailable, or not connected: that is normally an unauthenticated MCP server rather than a broken install, and this skill says what to tell the user.",
+      "path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/chatcut-plugin-basics/SKILL.md",
+      "source": "plugin-runtime",
+      "folder": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/chatcut-plugin-basics",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "create-motion-graphics",
+      "description": "Use whenever an ACP or local CLI agent in ChatCut Desktop needs to add, create, hand-author, patch, or place Motion Graphic JSX assets in a project. Covers direct inline JSX authoring, visual language, editable properties, asset binding, timeline placement, and local verification. Not for the built-in ChatCut Agent.",
+      "path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/create-motion-graphics/SKILL.md",
+      "source": "plugin-runtime",
+      "folder": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/create-motion-graphics",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "digital-human",
+      "description": "|",
+      "path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/digital-human/SKILL.md",
+      "source": "plugin-runtime",
+      "folder": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/digital-human",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "export",
+      "description": "Hosted ChatCut plugin sessions only (the `chatcut` MCP server). If the conversation is driving ChatCut Desktop (a `chatcut_desktop*` MCP server), load this skill only when the user explicitly chooses the plugin/web surface — desktop sessions otherwise ship their own instructions and tools. Export or deliver a ChatCut project through the hosted connector, including video, audio, subtitles, XML, and render-status checks.",
+      "path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/export/SKILL.md",
+      "source": "plugin-runtime",
+      "folder": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/export",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "known-errors",
+      "description": "Diagnose ChatCut plugin tool failures, rejected mutations, unexpected response shapes, and blocked import, generation, or render operations.",
+      "path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/known-errors/SKILL.md",
+      "source": "plugin-runtime",
+      "folder": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/known-errors",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "multicam-sync",
+      "description": "|",
+      "path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/multicam-sync/SKILL.md",
+      "source": "plugin-runtime",
+      "folder": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/multicam-sync",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "music",
+      "description": "|",
+      "path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/music/SKILL.md",
+      "source": "plugin-runtime",
+      "folder": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/music",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "product-help",
+      "description": "|",
+      "path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/product-help/SKILL.md",
+      "source": "plugin-runtime",
+      "folder": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/product-help",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "shader-gen",
+      "description": "|",
+      "path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/shader-gen/SKILL.md",
+      "source": "plugin-runtime",
+      "folder": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/shader-gen",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "talking-head-guide",
+      "description": "|",
+      "path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/talking-head-guide/SKILL.md",
+      "source": "plugin-runtime",
+      "folder": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/talking-head-guide",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "transcription",
+      "description": "Hosted ChatCut plugin sessions only (the `chatcut` MCP server). If the conversation is driving ChatCut Desktop (a `chatcut_desktop*` MCP server), load this skill only when the user explicitly chooses the plugin/web surface — desktop sessions otherwise ship their own instructions and tools. Use for ChatCut transcription, transcript readiness, captions, subtitles, transcript repair, filler removal, and speech-led editing setup.",
+      "path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/transcription/SKILL.md",
+      "source": "plugin-runtime",
+      "folder": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/transcription",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "verification",
+      "description": "Hosted ChatCut plugin sessions only (the `chatcut` MCP server). If the conversation is driving ChatCut Desktop (a `chatcut_desktop*` MCP server), load this skill only when the user explicitly chooses the plugin/web surface — desktop sessions otherwise ship their own instructions and tools. Verify that ChatCut plugin edits are reflected in project structure and visible timeline output before reporting success.",
+      "path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/verification/SKILL.md",
+      "source": "plugin-runtime",
+      "folder": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/verification",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "video-gen",
+      "description": "|",
+      "path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/video-gen/SKILL.md",
+      "source": "plugin-runtime",
+      "folder": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/video-gen",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "video-translation",
+      "description": "|",
+      "path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/video-translation/SKILL.md",
+      "source": "plugin-runtime",
+      "folder": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/video-translation",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "voice",
+      "description": "|",
+      "path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/voice/SKILL.md",
+      "source": "plugin-runtime",
+      "folder": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/voice",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    },
+    {
+      "name": "widget-forms",
+      "description": "Ask for structured ChatCut input using the current plugin host's supported form surface.",
+      "path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/widget-forms/SKILL.md",
+      "source": "plugin-runtime",
+      "folder": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/widget-forms",
+      "runtime_path": null,
+      "callable_status": "VISIBLE_ONLY"
+    }
+  ],
+  "tools": [
+    {
+      "id": "ai-master",
+      "role": "AI总经理",
+      "skill_or_tool": "/Users/xingxuan/.codex/skills/ai-master/SKILL.md",
+      "inputs": [
+        "CEO目标",
+        "预算",
+        "公司盘点",
+        "项目状态"
+      ],
+      "actions": [
+        "目标纠偏",
+        "员工调度",
+        "风险门禁",
+        "独立审计组织"
+      ],
+      "outputs": [
+        "任务合同",
+        "启动回执",
+        "状态与证据归档"
+      ],
+      "acceptance": [
+        "非自签最终PASS",
+        "每个依赖有四态",
+        "失败可追溯"
+      ],
+      "state": "UNKNOWN",
+      "evidence_path": "/Users/xingxuan/.codex/skills/ai-master/SKILL.md",
+      "last_probed_at": "2026-09-06"
+    },
+    {
+      "id": "ai-task-compiler",
+      "role": "任务编译员",
+      "skill_or_tool": "/Users/xingxuan/.codex/skills/ai-task-compiler/SKILL.md",
+      "inputs": [
+        "CEO口语目标",
+        "约束",
+        "预算"
+      ],
+      "actions": [
+        "编译目标、风险、工具和验收"
+      ],
+      "outputs": [
+        "机器可校验任务合同"
+      ],
+      "acceptance": [
+        "目标与方案分离",
+        "未知项显式化",
+        "权限字段完整"
+      ],
+      "state": "UNKNOWN",
+      "evidence_path": "/Users/xingxuan/.codex/skills/ai-task-compiler/SKILL.md",
+      "last_probed_at": "2026-09-06"
+    },
+    {
+      "id": "agent-eval-loop",
+      "role": "评测与回归工程师",
+      "skill_or_tool": "/Users/xingxuan/.codex/skills/agent-eval-loop/SKILL.md",
+      "inputs": [
+        "失败记录",
+        "验收规格",
+        "反例"
+      ],
+      "actions": [
+        "生成回归用例、重跑、比较"
+      ],
+      "outputs": [
+        "测试报告",
+        "永久回归项"
+      ],
+      "acceptance": [
+        "测试真实运行",
+        "失败可复现",
+        "结果有证据"
+      ],
+      "state": "UNKNOWN",
+      "evidence_path": "/Users/xingxuan/.codex/skills/agent-eval-loop/SKILL.md",
+      "last_probed_at": "2026-09-06"
+    },
+    {
+      "id": "animation-factory",
+      "role": "动画工厂总控",
+      "skill_or_tool": "/Users/xingxuan/.codex/skills/maomao-animation-studio/SKILL.md",
+      "inputs": [
+        "一句话目标或参考片",
+        "角色与风格要求",
+        "预算"
+      ],
+      "actions": [
+        "展开依赖、冻结产物、调用生成与审计"
+      ],
+      "outputs": [
+        "production状态",
+        "分镜包",
+        "代表段",
+        "成片与审计包"
+      ],
+      "acceptance": [
+        "startup_adapter回执",
+        "generation_gate放行",
+        "独立审计通过"
+      ],
+      "state": "UNKNOWN",
+      "evidence_path": "/Users/xingxuan/.codex/skills/maomao-animation-studio/scripts/startup_adapter.py",
+      "last_probed_at": "2026-09-06"
+    },
+    {
+      "id": "novel-characters",
+      "role": "角色设定师",
+      "skill_or_tool": "/Users/xingxuan/.codex/skills/novel-characters/SKILL.md",
+      "inputs": [
+        "角色描述",
+        "参考图",
+        "动作需求"
+      ],
+      "actions": [
+        "角色表、定妆照、三/四视图、一致性锚点"
+      ],
+      "outputs": [
+        "角色设定资产与提示词"
+      ],
+      "acceptance": [
+        "四视图或N/A理由",
+        "关键外观锁定",
+        "跨镜头一致性检查"
+      ],
+      "state": "UNKNOWN",
+      "evidence_path": "/Users/xingxuan/.codex/skills/novel-characters/SKILL.md",
+      "last_probed_at": "2026-09-06"
+    },
+    {
+      "id": "novel-art",
+      "role": "场景与道具美术师",
+      "skill_or_tool": "/Users/xingxuan/.codex/skills/novel-art/SKILL.md",
+      "inputs": [
+        "故事空间",
+        "风格",
+        "道具需求"
+      ],
+      "actions": [
+        "场景、道具、光照和资产锚点"
+      ],
+      "outputs": [
+        "美术设定与提示词"
+      ],
+      "acceptance": [
+        "空间可复用",
+        "关键道具锁定",
+        "光照变化有依据"
+      ],
+      "state": "UNKNOWN",
+      "evidence_path": "/Users/xingxuan/.codex/skills/novel-art/SKILL.md",
+      "last_probed_at": "2026-09-06"
+    },
+    {
+      "id": "novel-script",
+      "role": "剧本与节拍师",
+      "skill_or_tool": "/Users/xingxuan/.codex/skills/novel-script/SKILL.md",
+      "inputs": [
+        "故事目标",
+        "角色",
+        "时长",
+        "台词要求"
+      ],
+      "actions": [
+        "场次、节拍、动作因果、台词脚本"
+      ],
+      "outputs": [
+        "结构化剧本"
+      ],
+      "acceptance": [
+        "每个动作有意图和后果",
+        "台词可配音",
+        "节拍可映射分镜"
+      ],
+      "state": "UNKNOWN",
+      "evidence_path": "/Users/xingxuan/.codex/skills/novel-script/SKILL.md",
+      "last_probed_at": "2026-09-06"
+    },
+    {
+      "id": "novel-storyboard",
+      "role": "分镜与运镜师",
+      "skill_or_tool": "/Users/xingxuan/.codex/skills/novel-storyboard/SKILL.md",
+      "inputs": [
+        "剧本节拍",
+        "角色锚点",
+        "空间锚点",
+        "参考片"
+      ],
+      "actions": [
+        "分段、镜头、时长、构图、运镜和提示词"
+      ],
+      "outputs": [
+        "可生成分镜表与镜头提示词"
+      ],
+      "acceptance": [
+        "单段时长受控",
+        "动作连续",
+        "镜头切换有目的",
+        "生成前可审"
+      ],
+      "state": "UNKNOWN",
+      "evidence_path": "/Users/xingxuan/.codex/skills/novel-storyboard/SKILL.md",
+      "last_probed_at": "2026-09-06"
+    },
+    {
+      "id": "chatcut-video-gen",
+      "role": "视频生成执行员",
+      "skill_or_tool": "chatcut:video-gen",
+      "inputs": [
+        "已通过分镜段",
+        "角色/场景资产",
+        "授权预算"
+      ],
+      "actions": [
+        "在指定宿主调用视频生成"
+      ],
+      "outputs": [
+        "视频段及运行记录"
+      ],
+      "acceptance": [
+        "generation_gate放行",
+        "供应商run证据",
+        "代表段质量通过"
+      ],
+      "state": "UNKNOWN",
+      "evidence_path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/video-gen/SKILL.md",
+      "last_probed_at": "2026-09-06"
+    },
+    {
+      "id": "chatcut-edit",
+      "role": "剪辑与导出执行员",
+      "skill_or_tool": "chatcut:verification + chatcut:export",
+      "inputs": [
+        "已生成视频段",
+        "剪辑合同"
+      ],
+      "actions": [
+        "时间线、节奏、音画、导出和验证"
+      ],
+      "outputs": [
+        "工程时间线、导出文件、验证报告"
+      ],
+      "acceptance": [
+        "时长准确",
+        "音画同步",
+        "导出可播放"
+      ],
+      "state": "UNKNOWN",
+      "evidence_path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/verification/SKILL.md",
+      "last_probed_at": "2026-09-06"
+    },
+    {
+      "id": "chatcut-voice-music",
+      "role": "声音与音乐执行员",
+      "skill_or_tool": "chatcut:voice + chatcut:music + chatcut:transcription",
+      "inputs": [
+        "锁定台词",
+        "角色音色",
+        "音乐/音效要求"
+      ],
+      "actions": [
+        "配音、音乐、音效、转写与混音"
+      ],
+      "outputs": [
+        "声轨、字幕、混音报告"
+      ],
+      "acceptance": [
+        "语言统一",
+        "台词逐字核对",
+        "音画节拍通过"
+      ],
+      "state": "UNKNOWN",
+      "evidence_path": "/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills/voice/SKILL.md",
+      "last_probed_at": "2026-09-06"
+    },
+    {
+      "id": "browser-research",
+      "role": "研究员",
+      "skill_or_tool": "/Users/xingxuan/.codex/skills/browser-research-agent/SKILL.md",
+      "inputs": [
+        "待核验问题",
+        "来源范围"
+      ],
+      "actions": [
+        "浏览官方文档、GitHub和产品页面"
+      ],
+      "outputs": [
+        "带来源研究报告"
+      ],
+      "acceptance": [
+        "原始来源",
+        "日期",
+        "事实/推断分栏"
+      ],
+      "state": "UNKNOWN",
+      "evidence_path": "/Users/xingxuan/.codex/skills/browser-research-agent/SKILL.md",
+      "last_probed_at": "2026-09-06"
+    },
+    {
+      "id": "video-transcribe",
+      "role": "参考片分析员",
+      "skill_or_tool": "/Users/xingxuan/.codex/skills/video-transcribe/SKILL.md",
+      "inputs": [
+        "参考视频",
+        "分析维度"
+      ],
+      "actions": [
+        "转写、时间码、抽帧与证据整理"
+      ],
+      "outputs": [
+        "时间线、台词、镜头证据"
+      ],
+      "acceptance": [
+        "路径、哈希、ffprobe",
+        "未观察项标UNKNOWN"
+      ],
+      "state": "UNKNOWN",
+      "evidence_path": "/Users/xingxuan/.codex/skills/video-transcribe/SKILL.md",
+      "last_probed_at": "2026-09-06"
+    },
+    {
+      "id": "skill-discovery",
+      "role": "技能发现与安全审查员",
+      "skill_or_tool": "skill-finder + skill-vetter",
+      "inputs": [
+        "能力缺口",
+        "候选仓库"
+      ],
+      "actions": [
+        "本机优先、来源审查、授权安装、最小探针"
+      ],
+      "outputs": [
+        "候选清单、安装记录、探针证据"
+      ],
+      "acceptance": [
+        "许可证/安全审查",
+        "安装后实跑",
+        "不得把下载当可用"
+      ],
+      "state": "UNKNOWN",
+      "evidence_path": "/Users/xingxuan/.codex/skills/skill-finder/SKILL.md",
+      "last_probed_at": "2026-09-06"
+    },
+    {
+      "id": "blender",
+      "role": "白模与动作工程师",
+      "skill_or_tool": "/Applications/Blender.app/Contents/MacOS/Blender",
+      "inputs": [
+        "白模/骨骼/动作参考"
+      ],
+      "actions": [
+        "建模、绑定、动作预演、渲染"
+      ],
+      "outputs": [
+        "动作预演与工程文件"
+      ],
+      "acceptance": [
+        "版本探针",
+        "动作重心/接触/轨迹可审"
+      ],
+      "state": "CALLABLE",
+      "evidence_path": "/Applications/Blender.app/Contents/MacOS/Blender --version",
+      "last_probed_at": "2026-09-06"
+    },
+    {
+      "id": "motion-capture",
+      "role": "动作捕捉研究员",
+      "skill_or_tool": "GVHMR + mixamo-llm-mocap",
+      "inputs": [
+        "动作视频或骨骼数据"
+      ],
+      "actions": [
+        "提取/映射/清理动作"
+      ],
+      "outputs": [
+        "可导入动作资产"
+      ],
+      "acceptance": [
+        "入口可运行",
+        "动作文件可导入",
+        "许可可追溯"
+      ],
+      "state": "UNKNOWN",
+      "evidence_path": "/Users/xingxuan/Documents/ChatGPT/codex开发工程师 2/AI动画公司/06_动作工具链",
+      "last_probed_at": "2026-09-06"
+    },
+    {
+      "id": "grok-chairman",
+      "role": "独立董事长/审计员",
+      "skill_or_tool": "Grok Bot 董事长会话",
+      "inputs": [
+        "冻结材料",
+        "真实运行证据",
+        "反例"
+      ],
+      "actions": [
+        "独立复核、反证、裁决和建议"
+      ],
+      "outputs": [
+        "PASS/CHANGES_REQUIRED/INSUFFICIENT_EVIDENCE"
+      ],
+      "acceptance": [
+        "不采信自评",
+        "给出可重跑命令",
+        "生产者与审计者隔离"
+      ],
+      "state": "CALLABLE",
+      "evidence_path": "Grok Bot 董事长会话",
+      "last_probed_at": "2026-09-06"
+    },
+    {
+      "id": "independent-shot-auditor",
+      "role": "独立看片审计员",
+      "skill_or_tool": "待绑定独立Bot或审片流程",
+      "inputs": [
+        "成片/代表段",
+        "冻结验收标准"
+      ],
+      "actions": [
+        "逐镜头检查动作、重心、命中、音画和一致性"
+      ],
+      "outputs": [
+        "四级审片结论与返工清单"
+      ],
+      "acceptance": [
+        "独立身份",
+        "可追溯证据",
+        "不得由生产者自签"
+      ],
+      "state": "BLOCKED",
+      "evidence_path": "/Users/xingxuan/Documents/ChatGPT/codex开发工程师 2/AI动画公司/00_公司总控/验收等级与审计协议.md",
+      "last_probed_at": "2026-09-06"
+    }
+  ]
+}

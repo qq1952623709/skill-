@@ -1,0 +1,6 @@
+interface:
+  display_name: "茂茂动画工厂"
+  short_description: "一句话驱动动画全流程，自动统筹角色分镜、画面生成、台词配音、剪辑审片与导出"
+  default_prompt: "使用 $maomao-animation-studio，根据我描述的故事制作约一分钟动画，补齐角色、分镜、提示词、台词配音与剪辑，并在预算内完成独立审核和出片。"
+policy:
+  allow_implicit_invocation: true

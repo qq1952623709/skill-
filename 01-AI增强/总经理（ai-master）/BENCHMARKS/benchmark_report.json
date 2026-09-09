@@ -1,0 +1,68 @@
+{
+  "system": "ai-master",
+  "version": "2.1.0",
+  "generated_at": "2026-09-06T03:23:20+00:00",
+  "fixture_policy": "All synthetic inputs are explicitly marked and are not real-world evidence.",
+  "passed": 8,
+  "failed": 0,
+  "total": 8,
+  "cases": [
+    {
+      "name": "1_marketing_filter",
+      "passed": true,
+      "observed": "REJECTED_FOR_CORE",
+      "expected": "REJECTED_FOR_CORE"
+    },
+    {
+      "name": "2_duplicate_mapping",
+      "passed": true,
+      "observed": "MAP_TO_EXISTING",
+      "expected": "MAP_TO_EXISTING"
+    },
+    {
+      "name": "3_unknown_capability",
+      "passed": true,
+      "observed": "UNKNOWN_NEEDS_REALITY_PROBE",
+      "expected": "UNKNOWN_NEEDS_REALITY_PROBE"
+    },
+    {
+      "name": "4_complexity_control",
+      "passed": true,
+      "observed": "DIRECT_REQUEST",
+      "expected": "DIRECT_REQUEST"
+    },
+    {
+      "name": "5_high_risk_permission",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "6_failure_changes_system",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "7_final_artifact_reverification",
+      "passed": true,
+      "observed": "FAIL",
+      "expected": "FAIL"
+    },
+    {
+      "name": "8_method_competition",
+      "passed": true,
+      "observed": "BENCHMARK_REQUIRED",
+      "expected": "BENCHMARK_REQUIRED"
+    }
+  ],
+  "invariants": [
+    {
+      "name": "invariant_proven_requires_evidence",
+      "passed": true,
+      "observed": "REJECTED",
+      "expected": "REJECTED"
+    }
+  ],
+  "overall": "PASS"
+}

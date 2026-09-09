@@ -1,0 +1,6 @@
+interface:
+  display_name: "总经理入口"
+  short_description: "先审方向、盘点能力，再调度工具和独立审计"
+  default_prompt: "使用 $ai-master-manager 先读取能力地图和员工花名册，判断我的目标、工具路线、风险和最便宜验证，再决定是否执行。"
+policy:
+  allow_implicit_invocation: true

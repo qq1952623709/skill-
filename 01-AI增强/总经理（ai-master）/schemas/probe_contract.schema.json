@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Master Capability Probe Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["probe_id", "status", "product", "claim", "environment", "action", "success", "failure", "evidence", "limits", "stop"],
+  "properties": {
+    "probe_id": {"type": "string", "minLength": 1},
+    "status": {"const": "UNKNOWN_NEEDS_REALITY_PROBE"},
+    "product": {"type": "string", "minLength": 1},
+    "claim": {"type": "string", "minLength": 1},
+    "environment": {"type": "string", "minLength": 1},
+    "action": {"type": "string", "minLength": 1},
+    "success": {"type": "string", "minLength": 1},
+    "failure": {"type": "string", "minLength": 1},
+    "evidence": {"type": "string", "minLength": 1},
+    "limits": {"type": "object"},
+    "stop": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+  }
+}

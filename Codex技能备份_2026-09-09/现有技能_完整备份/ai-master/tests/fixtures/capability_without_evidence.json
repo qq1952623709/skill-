@@ -1,0 +1,23 @@
+{
+  "capability_id": "CAP-NEGATIVE",
+  "capability_name": "无证据能力",
+  "problem_solved": "负向测试",
+  "model_or_tool": "fixture",
+  "input": "x",
+  "output": "y",
+  "can_do": "声称可做",
+  "cannot_guarantee": "真实性",
+  "required_permission": "none",
+  "required_environment": "fixture",
+  "minimum_probe": "one action",
+  "pass_condition": "observable pass",
+  "fail_condition": "observable fail",
+  "evidence_level": "NONE",
+  "applicable_scope": "test",
+  "failure_boundary": "test only",
+  "version": "1.0",
+  "source": "synthetic fixture",
+  "last_verified": "",
+  "status": "PROVEN",
+  "evidence": ""
+}

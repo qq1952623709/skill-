@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Master Failure Record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["failure_id", "task", "environment", "symptom", "root_cause", "wrong_assumption", "fix", "permanent_constraint", "regression_test", "affected_method", "status"],
+  "properties": {
+    "failure_id": {"type": "string", "minLength": 1},
+    "root_cause": {"type": "string", "minLength": 1},
+    "permanent_constraint": {"type": "string", "minLength": 1},
+    "regression_test": {"type": "string", "minLength": 1},
+    "status": {"enum": ["OPEN", "MITIGATED", "VERIFIED_FIXED", "DEFERRED"]}
+  }
+}
