@@ -1,0 +1,48 @@
+{
+  "version": "1.0.0",
+  "purpose": "将用户目标语义映射到最小充分的本地 Skill 组合；用户无需点名 Skill。",
+  "routes": [
+    {
+      "id": "ROUTE-VIDEO-001",
+      "skill": "maomao-animation-studio",
+      "path": "C:/Users/MECHREVO/.codex/skills/personal/maomao-animation-studio/SKILL.md",
+      "when": ["做视频", "制作动画", "短视频", "分镜", "故事线", "2D动画", "日漫"],
+      "load_with": ["higgsfield-prompt"],
+      "role": "动画总制作与故事连续性统筹",
+      "status": "OBSERVED"
+    },
+    {
+      "id": "ROUTE-VIDEO-PROMPT-001",
+      "skill": "higgsfield-prompt",
+      "path": "C:/Users/MECHREVO/.codex/skills/higgsfield-prompt/SKILL.md",
+      "when": ["视频提示词", "镜头运动", "运镜", "Higgsfield", "生成视频提示词"],
+      "role": "视频模型提示词与镜头结构",
+      "status": "CLAIMED"
+    },
+    {
+      "id": "ROUTE-UI-001",
+      "skill": "ui-design",
+      "path": "C:/Users/MECHREVO/.codex/skills/ui-design/SKILL.md",
+      "when": ["做网页", "做网站", "做游戏界面", "UI", "页面", "交互"],
+      "load_with": ["anti-ui-slop"],
+      "role": "网页、游戏和产品界面设计实现",
+      "status": "CLAIMED"
+    },
+    {
+      "id": "ROUTE-UI-QUALITY-001",
+      "skill": "anti-ui-slop",
+      "path": "C:/Users/MECHREVO/.codex/skills/anti-ui-slop/SKILL.md",
+      "when": ["高级UI", "界面优化", "不要幼稚", "审查界面", "避免模板感"],
+      "role": "反低质、反模板化界面审查",
+      "status": "CLAIMED"
+    },
+    {
+      "id": "ROUTE-SKILL-GOVERNANCE-001",
+      "skill": "skill-awesome",
+      "path": "C:/Users/MECHREVO/.codex/skills/skill-awesome/SKILL.md",
+      "when": ["学习Skill", "添加技能", "整理技能", "技能库", "技能规范"],
+      "role": "Skill 设计规范与能力治理",
+      "status": "CLAIMED"
+    }
+  ]
+}

@@ -8,6 +8,7 @@ import hashlib
 import json
 import subprocess
 import sys
+import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, List
@@ -326,6 +327,29 @@ def status(root: Path) -> Dict[str, Any]:
     return {"root": str(root), "state": load_json(state_path) if state_path.exists() else {}, "counts": counts}
 
 
+def auto_route(root: Path, request: str) -> Dict[str, Any]:
+    route_path = root / "CAPABILITY_REGISTRY" / "skill_routes.json"
+    routes = load_json(route_path).get("routes", []) if route_path.exists() else []
+    folded = unicodedata.normalize("NFKC", request).casefold()
+    selected = []
+    for route in routes:
+        score = sum(1 for term in route.get("when", [])
+                    if unicodedata.normalize("NFKC", term).casefold() in folded)
+        if score:
+            selected.append((score, route))
+    selected.sort(key=lambda item: (-item[0], item[1].get("id", "")))
+    skills, seen = [], set()
+    for _, route in selected:
+        for name in [route.get("skill", ""), *route.get("load_with", [])]:
+            if name and name not in seen:
+                skills.append(name); seen.add(name)
+    return {"request": request, "registry": str(route_path),
+            "route_ids": [r.get("id") for _, r in selected],
+            "selected_skills": skills,
+            "matched": [{"id": r.get("id"), "skill": r.get("skill"), "score": s} for s, r in selected],
+            "status": "ROUTED" if skills else "NO_MATCH_REQUIRES_GENERAL_REASONING"}
+
+
 def inventory_check() -> Dict[str, Any]:
     script = Path("/Users/xingxuan/.codex/skills/maomao-animation-studio/scripts/inventory_check.py")
     if not script.exists():
@@ -377,6 +401,8 @@ def build_parser() -> argparse.ArgumentParser:
     commands.add_parser("benchmark")
     commands.add_parser("status")
     commands.add_parser("inventory-check")
+    route = commands.add_parser("auto-route")
+    route.add_argument("--request", required=True)
 
     preflight = commands.add_parser("preflight")
     preflight.add_argument("--request", required=True)
@@ -417,6 +443,8 @@ def main(argv: List[str] | None = None) -> int:
             output = inventory_check()
             if output.get("inventory_status") != "PASS":
                 raise ValidationError("company inventory is not PASS; OPERATE must stop")
+        elif args.command == "auto-route":
+            output = auto_route(root, args.request)
         elif args.command == "preflight":
             output = capability_preflight(args.request, args.route_id)
         elif args.command == "tool-gap":

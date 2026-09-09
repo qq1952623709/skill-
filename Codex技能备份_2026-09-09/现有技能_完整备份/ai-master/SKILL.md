@@ -27,6 +27,16 @@ metadata:
 
 ## 学习与治理路由
 
+### 自动 Skill 调度
+
+用户只需描述目标，不需要指定 Skill 名称。正式进入 OPERATE 前，先读取
+`CAPABILITY_REGISTRY/skill_routes.json`，按 `when` 语义匹配目标，再读取匹配 Skill 的
+`SKILL.md`；存在 `load_with` 时一并加载。默认选择最小充分组合，并在开工包中记录
+`selected_skills`、`route_ids`、每个 Skill 的路径与状态。只有用户明确要求某个工具时才提高
+其优先级；不得把“目录中存在”当成“已经证明可执行”。
+
+当前自动路由至少覆盖：视频/动画→茂茂动画工厂+视频提示词；网页/游戏 UI→界面设计+反低质界面审查；Skill 治理→Skill 规范库。新增 Skill 后，应先登记路由，再用真实任务探针将 `CLAIMED` 晋级为 `OBSERVED` 或 `PROVEN`。
+
 - “吸收这篇 / 这个方法靠谱吗”：读取 [来源准入](references/source-intake.md)，执行来源审计；未经现实证据不得升级为 `PROVEN`，不得自动修改 `MASTER_CORE.md`。
 - “这个产品能力是真的吗”：先查 `CAPABILITY_REGISTRY/capabilities.jsonl` 与 `PRODUCT_RADAR/products.jsonl`；证据不足时读取 [能力探针](references/capability-probe.md)，生成最小探针合同，不猜答案。
 - “这个任务你来 / 设计正确的AI用法”：读取 [实践模式](references/master-practice.md)，按最小充分复杂度执行和验证。
