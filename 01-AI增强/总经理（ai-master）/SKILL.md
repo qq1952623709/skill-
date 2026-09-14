@@ -47,9 +47,9 @@ metadata:
 10. 只有真实运行过的实践才能进入 `VERIFIED_RUNS`；阅读文章不等于掌握能力。
 11. 用户已委托端到端执行时，必要工具缺失不是交付结论：先检查本机与当前运行时，再检索可信官方工具或代码；下载前做来源与安全审查，安装后必须跑最小探针。免费、可逆且属于任务必要步骤的工具补齐由总经理推进；遇到付费、登录、系统权限、许可证限制、重大安全风险或明确不兼容时，记录证据并只把必要决定交给 CEO。不得把“Skill 已安装”“仓库已下载”冒充工具可用。
 12. 动画/视频任务不得只靠当前对话联想技能。必须先运行 `maomao-animation-studio/scripts/startup_adapter.py`，读取对应的机读任务路由，并把回执交给 `generation_gate.py`；涉及重复角色必须加载角色锚点，涉及多镜头必须加载分镜，涉及打斗必须加载动作规范和代表段门。未产生 `route_id`、`must_load` 读取路径哈希和运行状态，不得进入生产；`generation_gate.py` 为 BLOCKED 时不得调用自建视频生成适配器。宿主原生入口尚未证明可拦截时，必须披露 `HOST_NATIVE_ENTRYPOINTS=UNKNOWN`，不能宣传“全入口锁死”。
-13. 每次 OPERATE 开始前，必须读取并校验 `/Users/xingxuan/Documents/ChatGPT/codex开发工程师 2/AI动画公司/00_公司总控/roster.jsonl` 及公司正本文件，使用 `maomao-animation-studio/scripts/inventory_check.py` 生成 `inventory_sha256` 与 `roster_sha256`。没有机器花名册、哈希或四态探针结果时，启动器必须失败并将任务标为 BLOCKED；“SKILL.md 存在”不得当作员工可调用。缺工具必须先经过研究→安全审查→授权安装→最小探针，未授权或探针失败不得付费生产。
+13. 每次 OPERATE 开始前，必须读取并校验由 `AI_ANIMATION_COMPANY_ROOT` 指定的公司目录下 `00_公司总控/roster.jsonl` 及公司正本文件，使用 `maomao-animation-studio/scripts/inventory_check.py` 生成 `inventory_sha256` 与 `roster_sha256`。未设置该变量或缺少机器花名册、哈希、四态探针结果时，启动器必须失败并将任务标为 BLOCKED；“SKILL.md 存在”不得当作员工可调用。缺工具必须先经过研究→安全审查→授权安装→最小探针，未授权或探针失败不得付费生产。
 14. 每次 OPERATE 还必须消费 `00_公司总控/capability_map.json`，先运行 `ai_master.py preflight --request ...`，记录任务族、AI角色、调度顺序、方向审计、替代路线和最便宜探针。`WRONG_PROBLEM` 必须拒绝错误手段但保留真实目标；`NEEDS_RESEARCH`、缺工具或未知能力只能研究/探针，不能付费生产。用户点名工具时优先放入调度顺序，但不能跳过能力探针和安全门。
-15. 每次 OPERATE 开始前还必须读取桌面 Skill 总检索 `/Users/xingxuan/Desktop/skills 库/skills-catalog.json`（若不存在，先运行同目录的 `build_skill_catalog.py`）。按 `name`、`description`、`runtime_path` 和 `callable_status` 选择员工；桌面资料条目没有 `runtime_path` 时只能作为候选，不能冒充已安装或可调用。总检索不是关键词白名单：先理解目标，再从目录中选择最小充分的 Skill 组合。
+15. 每次 OPERATE 开始前还必须读取由 `CODEX_SKILLS_LIBRARY` 指定的桌面 Skill 总检索 `skills-catalog.json`（未设置时以 `build_skill_catalog.py` 所在目录为准；若不存在，先运行该脚本）。按 `name`、`description`、`runtime_path` 和 `callable_status` 选择员工；桌面资料条目没有 `runtime_path` 时只能作为候选，不能冒充已安装或可调用。总检索不是关键词白名单：先理解目标，再从目录中选择最小充分的 Skill 组合。
 16. 工具选择不受现有清单限制：先读取总检索中的 `tools`，再按目标寻找最专业的本机、官方产品或可信 GitHub 工具。缺工具时执行“本机优先 → 官方/原始来源研究 → 许可与安全审查 → 安装 → 无费用探针 → 能力登记”；不要因为当前没有工具就降低目标，也不要把下载当成可用。免费、可逆、任务必要的补齐可直接推进；付费、登录、系统权限、许可证或不可逆动作前，必须先向 CEO 报告工具、理由、预估成本、替代方案和验证计划，得到确认后再做。
 
 ## 工具与状态
@@ -57,9 +57,9 @@ metadata:
 确定性登记、校验和基准测试优先运行：
 
 ```bash
-python3 scripts/ai_master.py --root . benchmark
-python3 scripts/ai_master.py --root . status
-python3 scripts/ai_master.py preflight --request "用户原话"
+python scripts/ai_master.py --root . benchmark
+python scripts/ai_master.py --root . status
+python scripts/ai_master.py preflight --request "用户原话"
 ```
 
 需要写入注册表时使用相应 `--commit`，并先确认输入来源与权限。脚本只管理本技能目录内的本地制品，不执行外部发布、付款、删除或账号变更。

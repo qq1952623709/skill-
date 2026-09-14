@@ -10,7 +10,6 @@ metadata:
 
 这是用户熟悉名称的可见别名，不是另一套实现。调用时必须读取并执行：
 
-`/Users/xingxuan/.codex/skills/ai-animation-factory/SKILL.md`
+运行时技能目录中的 `ai-animation-factory/SKILL.md`（Windows 通常位于 `%USERPROFILE%\\.codex\\skills`；macOS/Linux 位于 `~/.codex/skills`）。
 
 该入口会继续调用正本 `maomao-animation-studio`，并在生成前完成 总经理预检、角色/场景/分镜准备、最小代表段和独立审计。
-

@@ -10,10 +10,11 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
-COMPANY_ROOT = Path("/Users/xingxuan/Documents/ChatGPT/codex开发工程师 2/AI动画公司")
+COMPANY_ROOT = Path(os.environ.get("AI_ANIMATION_COMPANY_ROOT", Path.home() / "Documents" / "AI动画公司")).expanduser()
 CONTROL_ROOT = COMPANY_ROOT / "00_公司总控"
 ROSTER = CONTROL_ROOT / "roster.jsonl"
 CAPABILITY_MAP = CONTROL_ROOT / "capability_map.json"

@@ -5,15 +5,14 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import shutil
 import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOTS = [
-    Path("/Users/xingxuan/.codex/skills"),
-    Path("/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills"),
-]
+CODEX_HOME = Path(os.environ.get("CODEX_HOME", Path.home() / ".codex"))
+ROOTS = [CODEX_HOME / "skills", *sorted((CODEX_HOME / "plugins" / "cache").glob("*/*/skills"))]
 
 
 def digest(path: Path) -> str:
@@ -38,8 +37,14 @@ def find_skill(name: str) -> Path | None:
 def probe(name: str) -> dict:
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     if name == "Blender" or name.lower() == "blender":
-        binary = Path("/Applications/Blender.app/Contents/MacOS/Blender")
-        if not binary.exists():
+        candidates = [
+            Path(os.environ["BLENDER_PATH"]).expanduser() if os.environ.get("BLENDER_PATH") else None,
+            Path(shutil.which("blender")) if shutil.which("blender") else None,
+            Path("C:/Program Files/Blender Foundation/Blender/blender.exe"),
+            Path("/Applications/Blender.app/Contents/MacOS/Blender"),
+        ]
+        binary = next((item for item in candidates if item and item.exists()), None)
+        if binary is None:
             return {"name": name, "state": "MISSING", "reason": "Blender binary not found", "checked_at": now}
         proc = subprocess.run([str(binary), "--version"], capture_output=True, text=True, check=False)
         return {"name": name, "state": "CALLABLE" if proc.returncode == 0 else "BLOCKED", "probe": [str(binary), "--version"], "returncode": proc.returncode, "stdout": proc.stdout.strip(), "checked_at": now}

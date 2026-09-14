@@ -9,7 +9,7 @@ metadata:
 # 总经理入口（显式入口）
 
 这是给用户在 Skill 库里直接找到的入口，不是另一套独立能力。实际规则以
-`/Users/xingxuan/.codex/skills/ai-master/SKILL.md` 为唯一正本。
+运行时技能目录中的 `ai-master/SKILL.md` 为唯一正本（Windows 通常为 `%USERPROFILE%\\.codex\\skills\\ai-master\\SKILL.md`；macOS/Linux 为 `~/.codex/skills/ai-master/SKILL.md`）。
 
 调用本入口时必须先读取正本，并按其顺序执行：
 

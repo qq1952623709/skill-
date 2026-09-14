@@ -10,6 +10,7 @@ import hashlib
 import json
 import sys
 import re
+import os
 import shutil
 import subprocess
 from datetime import datetime, timezone
@@ -18,10 +19,8 @@ from pathlib import Path
 from inventory_check import check_inventory
 from capability_map import resolve as resolve_capabilities
 
-ROOTS = [
-    Path("/Users/xingxuan/.codex/skills"),
-    Path("/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills"),
-]
+CODEX_HOME = Path(os.environ.get("CODEX_HOME", Path.home() / ".codex"))
+ROOTS = [CODEX_HOME / "skills", *sorted((CODEX_HOME / "plugins" / "cache").glob("*/*/skills"))]
 ANIMATION = ("动画", "漫剧", "短剧", "视频", "片", "镜头", "成片", "动作片")
 COMBAT = ("打斗", "打架", "对打", "打戏", "干架", "互殴", "打一架", "武器", "挥刀", "刀砍", "持刀", "挥拳", "碰撞", "击退", "重心", "打击感", "闪避", "追击", "死斗", "动作片")
 SPORTS = ("踢球", "足球", "篮球", "排球", "运动比赛")
@@ -68,8 +67,8 @@ def probe_runtime(name: str, path: Path) -> tuple[str, str]:
         return "MISSING", "SKILL.md missing"
     scripts = path / "scripts"
     if scripts.exists() and any(scripts.iterdir()):
-        node = shutil.which("node") or "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node"
-        if Path(node).exists():
+        node = shutil.which("node")
+        if node and Path(node).exists():
             return "UNKNOWN", "script entry exists; only runtime binary presence probed"
         return "BLOCKED", "script skill requires Node.js but no runtime was found"
     return "UNKNOWN", "skill file read; no execution probe requested"

@@ -10,20 +10,20 @@ metadata:
 
 这是 `maomao-animation-studio` 的正式可见入口。核心实现只有一份，避免两个 Skill 分叉；调用本入口时必须读取并执行：
 
-`/Users/xingxuan/.codex/skills/maomao-animation-studio/SKILL.md`
+运行时技能目录中的 `maomao-animation-studio/SKILL.md`（Windows 通常位于 `%USERPROFILE%\\.codex\\skills`；macOS/Linux 位于 `~/.codex/skills`）。
 
 ## 总经理开工顺序
 
 1. 先运行 总经理预检，识别任务族、员工、工具、方向风险和最便宜验证：
 
    ```bash
-   python3 /Users/xingxuan/.codex/skills/ai-master/scripts/ai_master.py preflight --request "用户原话"
+   python <运行时 skills>/ai-master/scripts/ai_master.py preflight --request "用户原话"
    ```
 
 2. 再运行动画启动器，读取公司盘点、能力地图和 Skill 哈希：
 
    ```bash
-   python3 /Users/xingxuan/.codex/skills/maomao-animation-studio/scripts/startup_adapter.py "用户原话" --receipt /tmp/animation-startup.json
+   python <运行时 skills>/maomao-animation-studio/scripts/startup_adapter.py "用户原话" --receipt <可写临时目录>/animation-startup.json
    ```
 
 3. `WRONG_PROBLEM`、`NEEDS_RESEARCH`、缺工具或未知能力时，只能研究/探针/做代表段，不能付费扩量。

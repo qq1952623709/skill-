@@ -10,16 +10,15 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 from typing import Any
 
 from inventory_check import CONTROL_ROOT, ROSTER, check_inventory
 
 MAP_PATH = CONTROL_ROOT / "capability_map.json"
-ROOTS = [
-    Path("/Users/xingxuan/.codex/skills"),
-    Path("/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills"),
-]
+CODEX_HOME = Path(os.environ.get("CODEX_HOME", Path.home() / ".codex"))
+ROOTS = [CODEX_HOME / "skills", *sorted((CODEX_HOME / "plugins" / "cache").glob("*/*/skills"))]
 
 
 def sha256(path: Path) -> str:

@@ -51,7 +51,7 @@ which yt-dlp || echo "缺少 yt-dlp，运行：pip install yt-dlp"
 python3 -c "import whisper; print('ok')" || echo "缺少 whisper，运行：pip install openai-whisper"
 
 # 检查 ffmpeg（Whisper 必须依赖）
-which ffmpeg || echo "缺少 ffmpeg，运行：brew install ffmpeg（macOS）或 sudo apt install ffmpeg（Linux）"
+ffmpeg -version || echo "缺少 ffmpeg：Windows 可用 winget install Gyan.FFmpeg；macOS 用 brew install ffmpeg；Linux 用 sudo apt install ffmpeg"
 ```
 
 检测 Apple Silicon（M 系列芯片）以决定是否使用 mlx-whisper：

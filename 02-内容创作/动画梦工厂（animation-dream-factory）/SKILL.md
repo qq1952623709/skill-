@@ -10,7 +10,6 @@ metadata:
 
 这是“动画梦工厂”名称的可见入口。实际执行统一转到：
 
-`/Users/xingxuan/.codex/skills/ai-animation-factory/SKILL.md`
+运行时技能目录中的 `ai-animation-factory/SKILL.md`（Windows 通常位于 `%USERPROFILE%\\.codex\\skills`；macOS/Linux 位于 `~/.codex/skills`）。
 
 不得因为别名而跳过方向审计、角色一致性、分镜、代表段、成本门或独立成片审计。
-

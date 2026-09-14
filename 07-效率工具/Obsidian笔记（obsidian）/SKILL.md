@@ -2,7 +2,7 @@
 name: obsidian
 description: Work with Obsidian vaults (plain Markdown notes) and automate via obsidian-cli.
 homepage: https://help.obsidian.md
-metadata: {"clawdbot":{"emoji":"💎","requires":{"bins":["obsidian-cli"]},"install":[{"id":"brew","kind":"brew","formula":"yakitrak/yakitrak/obsidian-cli","bins":["obsidian-cli"],"label":"Install obsidian-cli (brew)"}]}}
+metadata: {"clawdbot":{"emoji":"💎","requires":{"bins":["obsidian-cli"]},"install":[{"id":"manual","kind":"manual","label":"Install obsidian-cli for the current operating system"}]}}
 ---
 
 # Obsidian
@@ -18,13 +18,13 @@ Vault structure (typical)
 ## Find the active vault(s)
 
 Obsidian desktop tracks vaults here (source of truth):
-- `~/Library/Application Support/obsidian/obsidian.json`
+- Windows：`%APPDATA%\\obsidian\\obsidian.json`；macOS：`~/Library/Application Support/obsidian/obsidian.json`
 
 `obsidian-cli` resolves vaults from that file; vault name is typically the **folder name** (path suffix).
 
 Fast “what vault is active / where are the notes?”
 - If you’ve already set a default: `obsidian-cli print-default --path-only`
-- Otherwise, read `~/Library/Application Support/obsidian/obsidian.json` and use the vault entry with `"open": true`.
+- Otherwise, read the operating-system appropriate `obsidian.json` path above and use the vault entry with `"open": true`.
 
 Notes
 - Multiple vaults common (iCloud vs `~/Documents`, work/personal, etc.). Don’t guess; read config.

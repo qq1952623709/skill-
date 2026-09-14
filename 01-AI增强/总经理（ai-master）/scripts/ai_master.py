@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -37,6 +38,8 @@ DUPLICATE_SAMPLE_PATTERNS = (
 HIGH_RISK_PATTERNS = (
     "付款", "支付", "群发", "发布", "删除", "生产环境", "密钥", "权限变更", "credential",
 )
+
+CODEX_HOME = Path(os.environ.get("CODEX_HOME", Path.home() / ".codex"))
 
 
 class ValidationError(ValueError):
@@ -327,7 +330,7 @@ def status(root: Path) -> Dict[str, Any]:
 
 
 def inventory_check() -> Dict[str, Any]:
-    script = Path("/Users/xingxuan/.codex/skills/maomao-animation-studio/scripts/inventory_check.py")
+    script = CODEX_HOME / "skills" / "maomao-animation-studio" / "scripts" / "inventory_check.py"
     if not script.exists():
         raise ValidationError(f"company inventory checker missing: {script}")
     proc = subprocess.run([sys.executable, str(script), "--json"], capture_output=True, text=True, check=False)
@@ -340,7 +343,7 @@ def inventory_check() -> Dict[str, Any]:
 
 
 def capability_preflight(request: str, route_id: str | None = None) -> Dict[str, Any]:
-    script = Path("/Users/xingxuan/.codex/skills/maomao-animation-studio/scripts/capability_map.py")
+    script = CODEX_HOME / "skills" / "maomao-animation-studio" / "scripts" / "capability_map.py"
     if not script.exists():
         raise ValidationError(f"capability map resolver missing: {script}")
     command = [sys.executable, str(script), request]
@@ -356,7 +359,7 @@ def capability_preflight(request: str, route_id: str | None = None) -> Dict[str,
 
 
 def tool_gap_contract(tools: List[str]) -> Dict[str, Any]:
-    script = Path("/Users/xingxuan/.codex/skills/ai-master/scripts/tool_gap.py")
+    script = CODEX_HOME / "skills" / "ai-master" / "scripts" / "tool_gap.py"
     proc = subprocess.run([sys.executable, str(script), *tools], capture_output=True, text=True, check=False)
     try:
         return json.loads(proc.stdout)

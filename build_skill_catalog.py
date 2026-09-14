@@ -4,15 +4,17 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 from datetime import datetime, timezone
 from pathlib import Path
 
 
-DESKTOP_ROOT = Path("/Users/xingxuan/Desktop/skills 库")
-RUNTIME_ROOT = Path("/Users/xingxuan/.codex/skills")
-PLUGIN_ROOTS = [Path("/Users/xingxuan/.codex/plugins/cache/chatcut-inc/chatcut/0.2.26/skills")]
-ROSTER_PATH = Path("/Users/xingxuan/Documents/ChatGPT/codex开发工程师 2/AI动画公司/00_公司总控/roster.jsonl")
+DESKTOP_ROOT = Path(os.environ.get("CODEX_SKILLS_LIBRARY", Path(__file__).resolve().parent))
+CODEX_HOME = Path(os.environ.get("CODEX_HOME", Path.home() / ".codex"))
+RUNTIME_ROOT = Path(os.environ.get("CODEX_SKILLS_RUNTIME", CODEX_HOME / "skills"))
+PLUGIN_ROOTS = sorted((CODEX_HOME / "plugins" / "cache").glob("*/*/skills"))
+ROSTER_PATH = Path(os.environ["AI_ANIMATION_COMPANY_ROOT"]).expanduser() / "00_公司总控" / "roster.jsonl" if os.environ.get("AI_ANIMATION_COMPANY_ROOT") else None
 
 
 def metadata(path: Path) -> tuple[str, str]:
@@ -42,7 +44,7 @@ def collect(root: Path, kind: str) -> list[dict]:
 
 def collect_tools() -> list[dict]:
     tools = []
-    if not ROSTER_PATH.exists():
+    if ROSTER_PATH is None or not ROSTER_PATH.exists():
         return tools
     for line in ROSTER_PATH.read_text(encoding="utf-8", errors="replace").splitlines():
         if not line.strip():
@@ -100,7 +102,7 @@ def main() -> None:
         "",
         f"> 自动生成时间：{catalog['generated_at']}",
         "> 机器可读正本：`skills-catalog.json`",
-        "> 重建命令：`python3 build_skill_catalog.py`",
+        "> 重建命令：`python build_skill_catalog.py`（Windows）或 `python3 build_skill_catalog.py`（macOS/Linux）",
         "",
         "## 使用规则",
         "",
