@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "purpose": "将用户目标语义映射到最小充分的本地 Skill 组合；用户无需点名 Skill。",
+  "routes": [
+    {
+      "id": "ROUTE-ADULT-LIFESTYLE-IMAGE-001",
+      "skill": "adult-lifestyle-image-workflow",
+      "path": "D:/Codex/skills 库_副本/02-内容创作/美女生成器（adult-lifestyle-image-workflow）/SKILL.md",
+      "when": ["美女生成器", "生成美女图片", "生成女性生活摄影", "穿搭人像", "学院风人像"],
+      "load_with": ["imagegen"],
+      "load_with_path": "C:/Users/MECHREVO/.codex/skills/.system/imagegen/SKILL.md",
+      "role": "扩写女性生活摄影需求、策划连续人像并执行质量检查；由 imagegen 负责位图生成",
+      "status": "CLAIMED"
+    }
+  ]
+}
