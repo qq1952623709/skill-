@@ -1,0 +1,6 @@
+interface:
+  display_name: "人生教练"
+  short_description: "梳理个人选择、看清方向，并按需转成小步行动与复盘"
+  default_prompt: "请用 $life-coach 陪我梳理一个个人选择，先帮我把问题想清楚。"
+policy:
+  allow_implicit_invocation: true

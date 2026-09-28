@@ -9,6 +9,7 @@ import json
 import os
 import subprocess
 import sys
+import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, List
@@ -38,8 +39,6 @@ DUPLICATE_SAMPLE_PATTERNS = (
 HIGH_RISK_PATTERNS = (
     "付款", "支付", "群发", "发布", "删除", "生产环境", "密钥", "权限变更", "credential",
 )
-
-CODEX_HOME = Path(os.environ.get("CODEX_HOME", Path.home() / ".codex"))
 
 
 class ValidationError(ValueError):
@@ -329,38 +328,75 @@ def status(root: Path) -> Dict[str, Any]:
     return {"root": str(root), "state": load_json(state_path) if state_path.exists() else {}, "counts": counts}
 
 
+def auto_route(root: Path, request: str) -> Dict[str, Any]:
+    configured_root = os.environ.get("AI_MANAGER_ROOT") or os.environ.get("AI_COMPANY_ROOT")
+    default_root = "D:/Codex/AI总经理个人总控" if os.name == "nt" else str(Path.home() / "AI总经理个人总控")
+    route_path = Path(configured_root or default_root) / "CAPABILITY_REGISTRY" / "skill_routes.json"
+    if not route_path.exists():
+        route_path = root / "CAPABILITY_REGISTRY" / "skill_routes.json"
+    routes = load_json(route_path).get("routes", []) if route_path.exists() else []
+    folded = unicodedata.normalize("NFKC", request).casefold()
+    selected = []
+    for route in routes:
+        score = sum(1 for term in route.get("when", [])
+                    if unicodedata.normalize("NFKC", term).casefold() in folded)
+        if score:
+            selected.append((score, route))
+    selected.sort(key=lambda item: (-item[0], item[1].get("id", "")))
+    skills, seen = [], set()
+    for _, route in selected:
+        for name in [route.get("skill", ""), *route.get("load_with", [])]:
+            if name and name not in seen:
+                skills.append(name); seen.add(name)
+    return {"request": request, "registry": str(route_path),
+            "route_ids": [r.get("id") for _, r in selected],
+            "selected_skills": skills,
+            "matched": [{"id": r.get("id"), "skill": r.get("skill"), "score": s} for s, r in selected],
+            "status": "ROUTED" if skills else "NO_MATCH_REQUIRES_GENERAL_REASONING"}
+
+
+def animation_script(name: str) -> Path:
+    codex_home = Path(os.environ.get("CODEX_HOME", Path.home() / ".codex")).expanduser()
+    candidates = [
+        Path(__file__).resolve().parents[2] / "maomao-animation-studio" / "scripts" / name,
+        codex_home / "skills" / "personal" / "maomao-animation-studio" / "scripts" / name,
+    ]
+    return next((path for path in candidates if path.exists()), candidates[0])
+
+
 def inventory_check() -> Dict[str, Any]:
-    script = CODEX_HOME / "skills" / "maomao-animation-studio" / "scripts" / "inventory_check.py"
+    script = animation_script("inventory_check.py")
     if not script.exists():
-        raise ValidationError(f"company inventory checker missing: {script}")
-    proc = subprocess.run([sys.executable, str(script), "--json"], capture_output=True, text=True, check=False)
+        raise ValidationError(f"personal inventory checker missing: {script}")
+    proc = subprocess.run([sys.executable, str(script), "--json"], capture_output=True, text=True, encoding="utf-8", env={**os.environ, "PYTHONIOENCODING": "utf-8"}, check=False)
     try:
         output = json.loads(proc.stdout)
     except json.JSONDecodeError as exc:
-        raise ValidationError(f"company inventory checker returned invalid JSON: {proc.stdout[-500:]}") from exc
+        raise ValidationError(f"personal inventory checker returned invalid JSON: {proc.stdout[-500:]}") from exc
     output["control_plane_exit_code"] = proc.returncode
     return output
 
 
 def capability_preflight(request: str, route_id: str | None = None) -> Dict[str, Any]:
-    script = CODEX_HOME / "skills" / "maomao-animation-studio" / "scripts" / "capability_map.py"
+    script = animation_script("capability_map.py")
     if not script.exists():
         raise ValidationError(f"capability map resolver missing: {script}")
     command = [sys.executable, str(script), request]
     if route_id:
         command.extend(["--route-id", route_id])
-    proc = subprocess.run(command, capture_output=True, text=True, check=False)
+    proc = subprocess.run(command, capture_output=True, text=True, encoding="utf-8", env={**os.environ, "PYTHONIOENCODING": "utf-8"}, check=False)
     try:
         output = json.loads(proc.stdout)
     except json.JSONDecodeError as exc:
-        raise ValidationError(f"capability resolver returned invalid JSON: {proc.stdout[-500:]}") from exc
+        detail = (proc.stderr or proc.stdout)[-500:]
+        raise ValidationError(f"capability resolver failed (exit {proc.returncode}): {detail}") from exc
     output["control_plane_exit_code"] = proc.returncode
     return output
 
 
 def tool_gap_contract(tools: List[str]) -> Dict[str, Any]:
-    script = CODEX_HOME / "skills" / "ai-master" / "scripts" / "tool_gap.py"
-    proc = subprocess.run([sys.executable, str(script), *tools], capture_output=True, text=True, check=False)
+    script = Path(__file__).resolve().parent / "tool_gap.py"
+    proc = subprocess.run([sys.executable, str(script), *tools], capture_output=True, text=True, encoding="utf-8", env={**os.environ, "PYTHONIOENCODING": "utf-8"}, check=False)
     try:
         return json.loads(proc.stdout)
     except json.JSONDecodeError as exc:
@@ -380,6 +416,8 @@ def build_parser() -> argparse.ArgumentParser:
     commands.add_parser("benchmark")
     commands.add_parser("status")
     commands.add_parser("inventory-check")
+    route = commands.add_parser("auto-route")
+    route.add_argument("--request", required=True)
 
     preflight = commands.add_parser("preflight")
     preflight.add_argument("--request", required=True)
@@ -418,8 +456,8 @@ def main(argv: List[str] | None = None) -> int:
             output = status(root)
         elif args.command == "inventory-check":
             output = inventory_check()
-            if output.get("inventory_status") != "PASS":
-                raise ValidationError("company inventory is not PASS; OPERATE must stop")
+        elif args.command == "auto-route":
+            output = auto_route(root, args.request)
         elif args.command == "preflight":
             output = capability_preflight(args.request, args.route_id)
         elif args.command == "tool-gap":
@@ -449,6 +487,10 @@ def main(argv: List[str] | None = None) -> int:
         print(json.dumps({"status": "ERROR", "error": str(exc)}, ensure_ascii=False), file=sys.stderr)
         return 2
     print(json.dumps(output, ensure_ascii=False, indent=2))
+    if args.command == "inventory-check" and output.get("inventory_status") != "PASS":
+        return 2
+    if args.command == "preflight" and output.get("status") != "READY_FOR_PLAN":
+        return 2
     return 0
 
 

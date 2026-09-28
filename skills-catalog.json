@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-14T04:33:39.347822+00:00",
+  "generated_at": "2026-09-28T11:06:30+00:00",
   "roots": {
     "desktop_library": "C:\\Users\\MECHREVO\\Desktop\\skills 库_副本",
     "codex_runtime": "C:\\Users\\MECHREVO\\.codex\\skills",
     "plugin_runtime": []
   },
   "counts": {
-    "desktop_entries": 152,
-    "runtime_entries": 85,
+    "desktop_entries": 153,
+    "runtime_entries": 86,
     "plugin_entries": 0,
     "tool_entries": 0
   },
@@ -609,6 +609,13 @@
       "folder": "C:\\Users\\MECHREVO\\.codex\\skills\\ui-design"
     },
     {
+      "name": "life-coach",
+      "description": "Use when an adult explicitly wants help reflecting on personal choices, life direction, values, journaling, or a compassionate review; 当用户想梳理人生方向、自我认知、个人选择、非临床的重复模式或人生复盘时调用。按用户意图倾听、回答、分析、建议或设计路径；行动规划与记忆默认关闭。Do not use for crisis support, therapy, diagnosis, or specialist advice.",
+      "path": "C:\\Users\\MECHREVO\\.codex\\skills\\personal\\life-coach\\SKILL.md",
+      "source": "codex-runtime",
+      "folder": "C:\\Users\\MECHREVO\\.codex\\skills\\personal\\life-coach"
+    },
+    {
       "name": "context-engineering-agent",
       "description": "为复杂任务整理长期上下文、规则、约束和交付标准，适合项目启动、交接、代理反复跑偏、需要把零散资料变成可复用上下文包的场景。",
       "path": "C:\\Users\\MECHREVO\\Desktop\\skills 库_副本\\01-AI增强\\上下文工程代理（context-engineering-agent）\\SKILL.md",
@@ -1092,6 +1099,15 @@
       "source": "desktop-library",
       "folder": "C:\\Users\\MECHREVO\\Desktop\\skills 库_副本\\06-知识与学习\\课程设计代理（course-design-agent）",
       "runtime_path": "C:\\Users\\MECHREVO\\.codex\\skills\\personal\\course-design-agent\\SKILL.md",
+      "callable_status": "RUNTIME_REGISTERED"
+    },
+    {
+      "name": "life-coach",
+      "description": "Use when an adult explicitly wants help reflecting on personal choices, life direction, values, journaling, or a compassionate review; 当用户想梳理人生方向、自我认知、个人选择、非临床的重复模式或人生复盘时调用。按用户意图倾听、回答、分析、建议或设计路径；行动规划与记忆默认关闭。Do not use for crisis support, therapy, diagnosis, or specialist advice.",
+      "path": "D:\\Codex\\skills 库_副本\\06-知识与学习\\人生教练（life-coach）\\SKILL.md",
+      "source": "desktop-library",
+      "folder": "D:\\Codex\\skills 库_副本\\06-知识与学习\\人生教练（life-coach）",
+      "runtime_path": "C:\\Users\\MECHREVO\\.codex\\skills\\personal\\life-coach\\SKILL.md",
       "callable_status": "RUNTIME_REGISTERED"
     },
     {

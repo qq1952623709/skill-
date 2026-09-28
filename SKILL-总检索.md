@@ -63,6 +63,7 @@
 | last30days | `$last30days` | `C:\Users\MECHREVO\.codex\skills\personal\last30days\SKILL.md` | RUNTIME_REGISTERED |
 | lead-followup-automation | `$lead-followup-automation` | `C:\Users\MECHREVO\.codex\skills\personal\lead-followup-automation\SKILL.md` | RUNTIME_REGISTERED |
 | learning-loop | `$learning-loop` | `C:\Users\MECHREVO\.codex\skills\personal\learning-loop\SKILL.md` | RUNTIME_REGISTERED |
+| life-coach | `$life-coach` | `C:\Users\MECHREVO\.codex\skills\personal\life-coach\SKILL.md` | RUNTIME_REGISTERED |
 | maomao-animation-studio | `$maomao-animation-studio` | `C:\Users\MECHREVO\.codex\skills\personal\maomao-animation-studio\SKILL.md` | RUNTIME_REGISTERED |
 | maomao-ppt | `$maomao-ppt` | `C:\Users\MECHREVO\.codex\skills\personal\maomao-ppt\SKILL.md` | RUNTIME_REGISTERED |
 | maomao-skill-creator | `$maomao-skill-creator` | `C:\Users\MECHREVO\.codex\skills\personal\maomao-skill-creator\SKILL.md` | RUNTIME_REGISTERED |
@@ -149,6 +150,7 @@
 - `xiaohongshu-auto` — `C:\Users\MECHREVO\Desktop\skills 库_副本\05-社交媒体\自动发小红书（xiaohongshu-auto）\SKILL.md` — RUNTIME_REGISTERED
 - `meeting-notes-actions` — `C:\Users\MECHREVO\Desktop\skills 库_副本\06-知识与学习\会议纪要行动项（meeting-notes-actions）\SKILL.md` — RUNTIME_REGISTERED
 - `learning-loop` — `C:\Users\MECHREVO\Desktop\skills 库_副本\06-知识与学习\学习闭环（learning-loop）\SKILL.md` — RUNTIME_REGISTERED
+- `life-coach` — `D:\Codex\skills 库_副本\06-知识与学习\人生教练（life-coach）\SKILL.md` — RUNTIME_REGISTERED
 - `insight` — `C:\Users\MECHREVO\Desktop\skills 库_副本\06-知识与学习\洞察（insight）\SKILL.md` — RUNTIME_REGISTERED
 - `知识卡片` — `C:\Users\MECHREVO\Desktop\skills 库_副本\06-知识与学习\知识卡片（knowledge-cards）\SKILL.md` — VISIBLE_ONLY
 - `knowledge-palace` — `C:\Users\MECHREVO\Desktop\skills 库_副本\06-知识与学习\知识宫殿（knowledge-palace）\SKILL.md` — RUNTIME_REGISTERED

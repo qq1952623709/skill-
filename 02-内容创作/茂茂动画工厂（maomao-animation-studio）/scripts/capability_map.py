@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Resolve a user request against the AI company's capability map.
+"""Resolve a user request against the personal AI manager capability map.
 
 This is deliberately conservative: it maps goals to employees and probes
 their registered state; it never treats a SKILL.md as proof of runtime
@@ -17,8 +17,10 @@ from typing import Any
 from inventory_check import CONTROL_ROOT, ROSTER, check_inventory
 
 MAP_PATH = CONTROL_ROOT / "capability_map.json"
-CODEX_HOME = Path(os.environ.get("CODEX_HOME", Path.home() / ".codex"))
-ROOTS = [CODEX_HOME / "skills", *sorted((CODEX_HOME / "plugins" / "cache").glob("*/*/skills"))]
+CODEX_HOME = Path(os.environ.get("CODEX_HOME", Path.home() / ".codex")).expanduser()
+ROOTS = [CODEX_HOME / "skills" / "personal", CODEX_HOME / "skills"]
+ROOTS.extend(CODEX_HOME.glob("plugins/cache/*/*/skills"))
+ROOTS.extend(CODEX_HOME.glob("plugins/cache/*/*/*/skills"))
 
 
 def sha256(path: Path) -> str:
@@ -56,11 +58,12 @@ def locate_skill(name: str) -> Path | None:
 
 
 def roster_match(name: str, roster: list[dict[str, Any]]) -> dict[str, Any] | None:
-    short = name.split(":", 1)[-1]
+    folded = name.casefold()
+    short = name.split(":", 1)[-1].casefold()
     for row in roster:
-        rid = str(row.get("id", ""))
-        tool = str(row.get("skill_or_tool", ""))
-        if rid == name or rid == short or tool.endswith(f"/{short}/SKILL.md") or tool.endswith(f"/{name}/SKILL.md"):
+        rid = str(row.get("id", "")).casefold()
+        tool = str(row.get("skill_or_tool", "")).casefold()
+        if rid in {folded, short, f"skill:{short}"} or tool == folded or tool == short or tool.endswith(f"/{short}/skill.md"):
             return row
     return None
 
@@ -77,7 +80,31 @@ def family_for_request(request: str, route_id: str | None = None) -> str:
         return "animation_combat_oneshot"
     if any(x in text for x in ("白模", "动作预演", "blender做", "blender 做")):
         return "animation_combat_oneshot"
+    if any(x in text for x in ("pdf", "便携文档", "扫描件")):
+        return "pdf_work"
+    if any(x in text for x in ("开题报告", "论文", "word", "docx", "文档", "报告排版", "修改报告")):
+        return "document_work"
+    if any(x in text for x in ("做网页", "网站", "网页", "应用界面", "交互页面", "ui设计")):
+        return "web_design"
+    if any(x in text for x in ("ppt", "演示文稿", "幻灯片", "课件")):
+        return "presentation"
+    if any(x in text for x in ("excel", "表格", "工作簿", "数据透视")):
+        return "spreadsheet"
+    if any(x in text for x in ("美女生成器", "女性人像", "穿搭人像", "女性生活摄影")):
+        return "beauty_portrait"
+    if any(x in text for x in ("生成图片", "配图", "插画", "图片编辑", "图像生成")):
+        return "image_creation"
+    if "skill" in text and any(x in text for x in ("创建", "写一个", "新增", "安装", "接入", "修改", "开发", "适配")):
+        return "skill_governance"
+    if any(x in text for x in ("技能库", "skill治理", "skill 库", "skill治理", "总控正本", "roster.jsonl", "capability_map")):
+        return "skill_governance"
+    if any(x in text for x in ("帮我梳理人生", "梳理人生方向", "分析我的人生", "个人选择怎么想", "我想做人生规划", "自我认知梳理", "陪我反思一个决定", "人生复盘", "价值观梳理", "倾听我的烦恼")):
+        return "personal_growth_coaching"
+    if any(x in text for x in ("上网查", "搜索资料", "研究现状", "找 github", "找github", "github上面", "github 仓库", "github仓库", "核验最新", "对比来源")):
+        return "research"
     production_intent = any(x in text for x in ("做动画", "动画短片", "动画", "踢球", "足球", "漫剧", "短剧", "成片", "出片", "做视频", "做短片", "视频：", "视频"))
+    if any(x in text for x in ("写文章", "长文创作", "公众号文案", "原创内容", "润色文章")) and not production_intent:
+        return "writing"
     consult_intent = any(x in text for x in ("哪个ai", "哪个 AI", "哪个模型", "什么工具", "怎么收费", "github", "skill", "适合用"))
     if consult_intent and not production_intent:
         return "consult_or_tool_selection"
@@ -139,6 +166,13 @@ def direction_audit(request: str, family: str) -> dict[str, Any]:
 
 def resolve(request: str, route_id: str | None = None) -> dict[str, Any]:
     inventory = check_inventory()
+    if inventory["inventory_status"] != "PASS":
+        return {
+            "status": "BLOCKED",
+            "reason": "personal control inventory is not valid",
+            "personal_inventory": inventory,
+            "capability_map_path": str(MAP_PATH),
+        }
     capability_map = load_map()
     family = family_for_request(request, route_id)
     entry = next((x for x in capability_map["task_families"] if x["id"] == family), None)
@@ -153,7 +187,7 @@ def resolve(request: str, route_id: str | None = None) -> dict[str, Any]:
             "direction_audit": direction_audit(request, family),
             "capability_map_path": str(MAP_PATH),
             "capability_map_sha256": sha256(MAP_PATH),
-            "company_inventory": inventory,
+            "personal_inventory": inventory,
             "user_named_tools": user_named_tools,
         }
     roster = load_roster()
@@ -219,10 +253,11 @@ def resolve(request: str, route_id: str | None = None) -> dict[str, Any]:
         },
         "capability_map_path": str(MAP_PATH),
         "capability_map_sha256": sha256(MAP_PATH),
-        "company_inventory": inventory,
+        "personal_inventory": inventory,
         "counterargument": "外部 Demo 或长提示词不能证明本机工具和路线可用；先做最便宜的代表段并保留独立审计。",
         "stop_conditions": ["方向非 DIRECTION_PASS", "任一关键依赖 UNKNOWN/BLOCKED/MISSING", "代表段未通过", "独立审计未通过", "成本上限或权限未知"],
-        "independent_auditor": entry.get("ai_roles", {}).get("independent_auditor", "grok-chairman"),
+        "independent_auditor": entry.get("independent_auditor", "UNASSIGNED_UNLESS_SEPARATE_REVIEWER_CONFIRMED"),
+        "audit_policy": entry.get("audit_policy", "未配置独立审计员时只报告自检，不声称独立审计通过。"),
         "hard_stop_before_paid_generation": hard_stop,
     }
 
@@ -234,7 +269,7 @@ def main() -> int:
     args = parser.parse_args()
     result = resolve(args.request, args.route_id)
     print(json.dumps(result, ensure_ascii=False, indent=2))
-    return 0 if result.get("status") != "BLOCKED" else 2
+    return 0 if result.get("status") == "READY_FOR_PLAN" else 2
 
 
 if __name__ == "__main__":
