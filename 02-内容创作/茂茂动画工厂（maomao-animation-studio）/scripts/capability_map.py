@@ -18,7 +18,7 @@ from inventory_check import CONTROL_ROOT, ROSTER, check_inventory
 
 MAP_PATH = CONTROL_ROOT / "capability_map.json"
 CODEX_HOME = Path(os.environ.get("CODEX_HOME", Path.home() / ".codex")).expanduser()
-ROOTS = [CODEX_HOME / "skills" / "personal", CODEX_HOME / "skills"]
+ROOTS = [CODEX_HOME / "skills" / "personal", CODEX_HOME / "skills", CODEX_HOME / "skills" / ".system"]
 ROOTS.extend(CODEX_HOME.glob("plugins/cache/*/*/skills"))
 ROOTS.extend(CODEX_HOME.glob("plugins/cache/*/*/*/skills"))
 
@@ -98,12 +98,12 @@ def family_for_request(request: str, route_id: str | None = None) -> str:
         return "skill_governance"
     if any(x in text for x in ("技能库", "skill治理", "skill 库", "skill治理", "总控正本", "roster.jsonl", "capability_map")):
         return "skill_governance"
-    if any(x in text for x in ("帮我梳理人生", "梳理人生方向", "分析我的人生", "个人选择怎么想", "我想做人生规划", "自我认知梳理", "陪我反思一个决定", "人生复盘", "价值观梳理", "倾听我的烦恼")):
+    if any(x in text for x in ("帮我梳理人生", "梳理人生方向", "分析我的人生", "个人选择怎么想", "我想做人生规划", "自我认知梳理", "陪我反思一个决定", "人生复盘", "价值观梳理", "倾听我的烦恼", "职业选择上很迷茫", "梳理一下自己的价值观", "职业方向梳理", "梳理职业方向")):
         return "personal_growth_coaching"
-    if any(x in text for x in ("上网查", "搜索资料", "研究现状", "找 github", "找github", "github上面", "github 仓库", "github仓库", "核验最新", "对比来源")):
+    if any(x in text for x in ("上网查", "上网搜索", "搜索资料", "搜索这方面的资料", "查找资料", "网上找资料", "联网搜索", "研究现状", "找 github", "找github", "github上面", "github 仓库", "github仓库", "核验最新", "对比来源")):
         return "research"
     production_intent = any(x in text for x in ("做动画", "动画短片", "动画", "踢球", "足球", "漫剧", "短剧", "成片", "出片", "做视频", "做短片", "视频：", "视频"))
-    if any(x in text for x in ("写文章", "长文创作", "公众号文案", "原创内容", "润色文章")) and not production_intent:
+    if any(x in text for x in ("写文章", "写一篇文章", "写一篇公众号文章", "公众号文章", "撰写文章", "长文创作", "公众号文案", "原创内容", "润色文章")) and not production_intent:
         return "writing"
     consult_intent = any(x in text for x in ("哪个ai", "哪个 AI", "哪个模型", "什么工具", "怎么收费", "github", "skill", "适合用"))
     if consult_intent and not production_intent:

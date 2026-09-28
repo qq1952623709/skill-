@@ -16,7 +16,7 @@
       "id": "ROUTE-SKILL-GOVERNANCE-001",
       "skill": "skill-awesome",
       "path": "C:/Users/MECHREVO/.codex/skills/skill-awesome/SKILL.md",
-      "when": ["学习Skill", "添加技能", "整理技能", "技能库", "技能规范", "创建 Skill", "写一个 Skill", "新增 Skill", "安装 Skill", "接入 Skill", "人生教练 Skill", "创建人生教练", "写一个人生教练"],
+      "when": ["学习Skill", "添加技能", "整理技能", "技能库", "技能规范", "创建 Skill", "创建一个新 Skill", "帮我创建一个新 Skill", "写一个 Skill", "新增 Skill", "安装 Skill", "接入 Skill", "人生教练 Skill", "创建人生教练", "写一个人生教练"],
       "load_with": ["skill-vetter", "skill-creator", "ai-master-toolkit"],
       "role": "Skill 设计规范与能力治理",
       "status": "OBSERVED"
@@ -25,7 +25,7 @@
       "id": "ROUTE-LIFE-COACH-001",
       "skill": "life-coach",
       "path": "C:/Users/MECHREVO/.codex/skills/personal/life-coach/SKILL.md",
-      "when": ["帮我梳理人生", "梳理人生方向", "分析我的人生", "个人选择怎么想", "我想做人生规划", "自我认知梳理", "陪我反思一个决定", "人生复盘", "价值观梳理", "倾听我的烦恼"],
+      "when": ["帮我梳理人生", "梳理人生方向", "分析我的人生", "个人选择怎么想", "我想做人生规划", "自我认知梳理", "陪我反思一个决定", "人生复盘", "价值观梳理", "倾听我的烦恼", "职业选择上很迷茫", "梳理一下自己的价值观", "职业方向梳理", "梳理职业方向"],
       "role": "成人非临床倾听、人生梳理、个人选择与温和复盘；行动规划仅按用户意愿进入可选模块",
       "status": "OBSERVED"
     }
